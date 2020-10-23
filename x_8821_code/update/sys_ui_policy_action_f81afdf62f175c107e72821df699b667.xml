@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>jelly_script</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-20 18:30:19</sys_created_on>
+        <sys_id>f81afdf62f175c107e72821df699b667</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>jelly_script</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>sys_ui_policy_action_f81afdf62f175c107e72821df699b667</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-20 18:30:19</sys_updated_on>
+        <table>x_8821_code_code_snippet</table>
+        <ui_policy display_value="Applicable in Context is Client/Server">bc1ab9f62f175c107e72821df699b608</ui_policy>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+</record_update>

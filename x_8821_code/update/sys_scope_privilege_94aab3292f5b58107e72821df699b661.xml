@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>read</operation>
+        <source_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-17 06:39:34</sys_created_on>
+        <sys_id>94aab3292f5b58107e72821df699b661</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sys_notification_execution0007</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>sys_scope_privilege_94aab3292f5b58107e72821df699b661</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-17 06:39:34</sys_updated_on>
+        <target_name>sys_notification_execution0007</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+</record_update>

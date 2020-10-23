@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="DELETE">
+        <active>true</active>
+        <category>Service Portal</category>
+        <format>png</format>
+        <height>34</height>
+        <image>6e05ed332fd710507e72821df699b6d0</image>
+        <name>infocenter_logo.png</name>
+        <size_bytes>2117</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-23 19:30:32</sys_created_on>
+        <sys_id>938469332fd710507e72821df699b633</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>infocenter_logo.png</sys_name>
+        <sys_package display_value="Code" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>db_image_938469332fd710507e72821df699b633</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-23 19:32:20</sys_updated_on>
+        <thumbnail/>
+        <width>100</width>
+    </db_image>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</application>
+        <file_path/>
+        <instance_id>c813d5c6db785850e03ad7c8f49619d6</instance_id>
+        <instance_name>dev103825</instance_name>
+        <name>db_image_938469332fd710507e72821df699b633</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image"><db_image action="INSERT_OR_UPDATE"><active>true</active><category>Service Portal</category><format>png</format><height>34</height><image>6e05ed332fd710507e72821df699b6d0</image><name>infocenter_logo.png</name><size_bytes>2117</size_bytes><sys_class_name>db_image</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-09-23 19:30:32</sys_created_on><sys_id>938469332fd710507e72821df699b633</sys_id><sys_mod_count>4</sys_mod_count><sys_name>infocenter_logo.png</sys_name><sys_package display_value="Code" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package><sys_policy/><sys_scope display_value="Code">0f7b73c4dba433007d159235ca96197c</sys_scope><sys_update_name>db_image_938469332fd710507e72821df699b633</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-09-23 19:32:20</sys_updated_on><thumbnail/><width>100</width></db_image></record_update>]]></payload>
+        <payload_hash>-2051304076</payload_hash>
+        <record_name>infocenter_logo.png</record_name>
+        <reverted_from/>
+        <source>b35be34d2f5fd4107e72821df699b67f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-23 19:32:31</sys_created_on>
+        <sys_id>8915e5332fd710507e72821df699b6a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>174bc73f8a70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-23 19:32:31</sys_updated_on>
+        <type>Images</type>
+        <update_guid>0515e53392d710508147577f7844eda6</update_guid>
+        <update_guid_history>0515e53392d710508147577f7844eda6:-2051304076,f605ed33c8d71050066cd77723f1d5dc:-107174490,2205ed33e3d71050cf92b71940ce28d7:1075514159,aa05ed3370d7105082327e7a57be93d4:614985761,82a4a933a2d7105066a690641e11d78e:-1254259754,46a4a933e1d710502bd6de87a2634889:-1261094263,caa4a933dbd71050f30645fb285cac86:588573435,40a4adff809710502dc5cb60d7199535:1032748432</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">061521732fd710507e72821df699b6f1</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-23 19:32:34</sys_created_on>
+        <sys_db_object display_value="" name="db_image">db_image</sys_db_object>
+        <sys_id>15efd488355b4b4385d3227f606ac639</sys_id>
+        <sys_metadata>938469332fd710507e72821df699b633</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>infocenter_logo.png</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_scope_delete display_value="">2f952166b84d4492b77d2b80ba54eeb1</sys_scope_delete>
+        <sys_update_name>db_image_938469332fd710507e72821df699b633</sys_update_name>
+        <sys_update_version display_value="db_image_938469332fd710507e72821df699b633">8915e5332fd710507e72821df699b6a6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-23 19:32:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

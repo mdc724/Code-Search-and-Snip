@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter">
+    <sys_ws_query_parameter action="DELETE">
+        <example_value/>
+        <name>table</name>
+        <required>false</required>
+        <short_description/>
+        <sys_class_name>sys_ws_query_parameter</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-17 09:06:43</sys_created_on>
+        <sys_id>0f4c90b52fdb58107e72821df699b69a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>table</sys_name>
+        <sys_package display_value="Code" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>sys_ws_query_parameter_0f4c90b52fdb58107e72821df699b69a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-17 09:06:43</sys_updated_on>
+        <web_service_definition display_value="query">8e761090db2833007d159235ca9619bb</web_service_definition>
+    </sys_ws_query_parameter>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</application>
+        <file_path/>
+        <instance_id>c813d5c6db785850e03ad7c8f49619d6</instance_id>
+        <instance_name>dev103825</instance_name>
+        <name>sys_ws_query_parameter_0f4c90b52fdb58107e72821df699b69a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter"><sys_ws_query_parameter action="INSERT_OR_UPDATE"><example_value/><name>table</name><required>false</required><short_description/><sys_class_name>sys_ws_query_parameter</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-09-17 09:06:43</sys_created_on><sys_id>0f4c90b52fdb58107e72821df699b69a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>table</sys_name><sys_package display_value="Code" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package><sys_policy/><sys_scope display_value="Code">0f7b73c4dba433007d159235ca96197c</sys_scope><sys_update_name>sys_ws_query_parameter_0f4c90b52fdb58107e72821df699b69a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-09-17 09:06:43</sys_updated_on><web_service_definition display_value="query">8e761090db2833007d159235ca9619bb</web_service_definition></sys_ws_query_parameter></record_update>]]></payload>
+        <payload_hash>-889879637</payload_hash>
+        <record_name>table</record_name>
+        <reverted_from/>
+        <source>b35be34d2f5fd4107e72821df699b67f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-17 09:06:43</sys_created_on>
+        <sys_id>7b4c54b52fdb58107e72821df699b6c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1749b50e4740000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-17 09:06:43</sys_updated_on>
+        <type>Scripted REST Query Parameter</type>
+        <update_guid>b34c54b5d2db58100895b3c37ec0cdc5</update_guid>
+        <update_guid_history>b34c54b5d2db58100895b3c37ec0cdc5:-889879637</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-17 09:31:44</sys_created_on>
+        <sys_db_object display_value="" name="sys_ws_query_parameter">sys_ws_query_parameter</sys_db_object>
+        <sys_id>b26e2ca9b27d4e0899f80931e7e45ba4</sys_id>
+        <sys_metadata>0f4c90b52fdb58107e72821df699b69a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>table</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_scope_delete display_value="">2f952166b84d4492b77d2b80ba54eeb1</sys_scope_delete>
+        <sys_update_name>sys_ws_query_parameter_0f4c90b52fdb58107e72821df699b69a</sys_update_name>
+        <sys_update_version display_value="sys_ws_query_parameter_0f4c90b52fdb58107e72821df699b69a">7b4c54b52fdb58107e72821df699b6c5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-17 09:31:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

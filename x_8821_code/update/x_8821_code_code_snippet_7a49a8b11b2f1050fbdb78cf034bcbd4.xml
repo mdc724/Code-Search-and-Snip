@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_8821_code_code_snippet">
+    <x_8821_code_code_snippet action="INSERT_OR_UPDATE">
+        <applicable_in_application_files>70b924f11b2f1050fbdb78cf034bcb32</applicable_in_application_files>
+        <applicable_in_context>server</applicable_in_context>
+        <client_script><![CDATA[// To make code snippet able to test "Sample Input":
+
+// fnName(arg1, arg2, arg3);
+// function fnName(arg1, arg2, arg3) {
+    // Code to execute
+    // return <result>;
+// }]]></client_script>
+        <css/>
+        <description>UI Scripts are tricky and are sometimes of great risk to even test from the ServiceNow environment.  They have access to the platform's source code and document object (DOM) at runtime, so they must be carefully constructed.&#13;
+See the comments below illustrating a carefully constructed UI Script that changes the color of Context Menu Items.  Repurpose all of this code except for the "var css" line when constructing most of your UI Scripts.&#13;
+</description>
+        <jelly_script/>
+        <link/>
+        <name>How to Create a UI Script Safely When Performing DOM Manipulation</name>
+        <option_schema/>
+        <sample_input>{&#13;
+"arg1":  "val1",&#13;
+"arg2":  "val2",&#13;
+"arg3":  "val3"&#13;
+// Add additional arguments as needed.&#13;
+// Please delete these comments before executing.&#13;
+}</sample_input>
+        <sample_output_client/>
+        <sample_output_server/>
+        <server_script><![CDATA[// Wait until the page is loaded before applying the style sheet, to ensure it's not overwritten by other styles or runtime JavaScript
+addLoadEvent(function() {  
+
+try { // Necessary to prevent failure, which at its worst could prevent the environment from even being useable
+
+	// Pseudo code, if this only should execute on a specific page or pages:  if (window.location.href == '<URL here>') OR if ('window.location.href.toString().indexOf(URL part(s)) != -1)
+  
+    // Onhover with Element
+    var css = '.context_item:hover { background-color: #111!important }';  
+
+    // Create and append a style sheet so it executes after ServiceNow's existing style sheets
+    var style = document.createElement('style');  
+    if (style.styleSheet) {  
+        style.styleSheet.cssText = css;  
+    } else {  
+        style.appendChild(document.createTextNode(css));  
+    }  
+  
+    document.getElementsByTagName('head')[0].appendChild(style);  
+}
+  
+catch(err) {}  
+});  
+]]></server_script>
+        <sys_class_name>x_8821_code_code_snippet</sys_class_name>
+        <sys_created_by>alex.chansuthus@infocenter.io</sys_created_by>
+        <sys_created_on>2020-09-29 20:20:04</sys_created_on>
+        <sys_id>7a49a8b11b2f1050fbdb78cf034bcbd4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>How to Create a UI Script Safely When Performing DOM Manipulation</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>x_8821_code_code_snippet_7a49a8b11b2f1050fbdb78cf034bcbd4</sys_update_name>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-23 03:08:56</sys_updated_on>
+        <template/>
+    </x_8821_code_code_snippet>
+</record_update>

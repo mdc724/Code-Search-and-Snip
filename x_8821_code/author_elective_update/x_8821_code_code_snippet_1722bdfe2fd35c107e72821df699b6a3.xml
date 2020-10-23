@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_8821_code_code_snippet">
+    <x_8821_code_code_snippet action="DELETE">
+        <applicable_in_application_files/>
+        <applicable_in_context>server</applicable_in_context>
+        <client_script/>
+        <css/>
+        <description>Phone numbers that are placed on User, Contact and Consumer records by external systems often come in a variety of non-consistent phone formats, like E164.  Even call systems sometimes pass phone arguments (via URL) that are not consistent with itself or with ServiceNow.&#13;
+&#13;
+The code snippet below is a quick remedy to this inconsistency.  Please use the function below in order to output a consistent phone number format – just make sure this is applied to all needed contexts:  transform field scripts, business rules, and even client scripts where applicable.&#13;
+</description>
+        <jelly_script/>
+        <link/>
+        <name>Format Phone Number</name>
+        <option_schema/>
+        <sample_input>{
+"phoneNumber":  "8065761133"
+}</sample_input>
+        <sample_output>(806) 576-1133</sample_output>
+        <server_script><![CDATA[formatPhoneNumber(phoneNumber);
+
+function formatPhoneNumber(phoneNumber) {
+
+	// Return if phone number empty  
+	if (phoneNumber == "" || phoneNumber == null || phoneNumber == undefined)  
+		return null;  
+
+
+	// Format Phone Number  
+	phoneNumber = String(phoneNumber).replace(/[^0-9]/g, '');  
+
+	if (phoneNumber.toString().length == 10) {  
+		phoneNumber = '(' + phoneNumber.toString().substr(0,3) + ') ' +   
+			phoneNumber.toString().substr(3,3) + '-' +   
+			phoneNumber.toString().substr(6,4);  
+	}  
+	if (phoneNumber.toString().length == 11) {  
+		phoneNumber = phoneNumber.toString().slice(1);  
+		phoneNumber = '(' + phoneNumber.toString().substr(0,3) + ') ' +   
+			phoneNumber.toString().substr(3,3) + '-' +   
+			phoneNumber.toString().substr(6,4);  
+	}
+
+	return phoneNumber; // Sample Return Value:  (111) 222-3333  
+}
+
+]]></server_script>
+        <sys_class_name>x_8821_code_code_snippet</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-20 17:57:41</sys_created_on>
+        <sys_id>1722bdfe2fd35c107e72821df699b6a3</sys_id>
+        <sys_mod_count>84</sys_mod_count>
+        <sys_name>Format Phone Number</sys_name>
+        <sys_package display_value="Code" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>x_8821_code_code_snippet_1722bdfe2fd35c107e72821df699b6a3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-24 17:58:44</sys_updated_on>
+        <template/>
+    </x_8821_code_code_snippet>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</application>
+        <file_path/>
+        <instance_id>c813d5c6db785850e03ad7c8f49619d6</instance_id>
+        <instance_name>dev103825</instance_name>
+        <name>x_8821_code_code_snippet_1722bdfe2fd35c107e72821df699b6a3</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_8821_code_code_snippet"&gt;&lt;x_8821_code_code_snippet action="INSERT_OR_UPDATE"&gt;&lt;applicable_in_application_files/&gt;&lt;applicable_in_context&gt;server&lt;/applicable_in_context&gt;&lt;client_script/&gt;&lt;css/&gt;&lt;description&gt;Phone numbers that are placed on User, Contact and Consumer records by external systems often come in a variety of non-consistent phone formats, like E164.  Even call systems sometimes pass phone arguments (via URL) that are not consistent with itself or with ServiceNow.&amp;#13;
+&amp;#13;
+The code snippet below is a quick remedy to this inconsistency.  Please use the function below in order to output a consistent phone number format – just make sure this is applied to all needed contexts:  transform field scripts, business rules, and even client scripts where applicable.&amp;#13;
+&lt;/description&gt;&lt;jelly_script/&gt;&lt;link/&gt;&lt;name&gt;Format Phone Number&lt;/name&gt;&lt;option_schema/&gt;&lt;sample_input&gt;{
+"phoneNumber":  "8065761133"
+}&lt;/sample_input&gt;&lt;sample_output&gt;(806) 576-1133&lt;/sample_output&gt;&lt;server_script&gt;&lt;![CDATA[formatPhoneNumber(phoneNumber);
+
+function formatPhoneNumber(phoneNumber) {
+
+	// Return if phone number empty  
+	if (phoneNumber == "" || phoneNumber == null || phoneNumber == undefined)  
+		return null;  
+
+
+	// Format Phone Number  
+	phoneNumber = String(phoneNumber).replace(/[^0-9]/g, '');  
+
+	if (phoneNumber.toString().length == 10) {  
+		phoneNumber = '(' + phoneNumber.toString().substr(0,3) + ') ' +   
+			phoneNumber.toString().substr(3,3) + '-' +   
+			phoneNumber.toString().substr(6,4);  
+	}  
+	if (phoneNumber.toString().length == 11) {  
+		phoneNumber = phoneNumber.toString().slice(1);  
+		phoneNumber = '(' + phoneNumber.toString().substr(0,3) + ') ' +   
+			phoneNumber.toString().substr(3,3) + '-' +   
+			phoneNumber.toString().substr(6,4);  
+	}
+
+	return phoneNumber; // Sample Return Value:  (111) 222-3333  
+}
+
+]]&gt;&lt;/server_script&gt;&lt;sys_class_name&gt;x_8821_code_code_snippet&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-09-20 17:57:41&lt;/sys_created_on&gt;&lt;sys_id&gt;1722bdfe2fd35c107e72821df699b6a3&lt;/sys_id&gt;&lt;sys_mod_count&gt;84&lt;/sys_mod_count&gt;&lt;sys_name&gt;Format Phone Number&lt;/sys_name&gt;&lt;sys_package display_value="Code" source="x_8821_code"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Code"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_scope&gt;&lt;sys_update_name&gt;x_8821_code_code_snippet_1722bdfe2fd35c107e72821df699b6a3&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-09-24 17:58:44&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;/x_8821_code_code_snippet&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1095475970</payload_hash>
+        <record_name>Format Phone Number</record_name>
+        <reverted_from/>
+        <source>b35be34d2f5fd4107e72821df699b67f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-24 17:58:44</sys_created_on>
+        <sys_id>11391a082fe750507e72821df699b667</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>174c1447b730000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-24 17:58:44</sys_updated_on>
+        <type>Code Snippet</type>
+        <update_guid>99391a089be750501dcf87ce30445566</update_guid>
+        <update_guid_history>99391a089be750501dcf87ce30445566:-1095475970,7b2952485ee750501c8036d2e22a83f1:1038214398,c6d55644aae750501249b6a5b57c4942:2118852862,d195564463e75050ef80650798c7ea9c:1038214398,7cc49a0445e75050fdffad3503ff3534:1549056272,de3ac2c80ea750508ef90ce478cb6360:-759615170,ac3a42c8ada7505086b5fe33a064c62f:-1745606290,b6390288eea750504cf9857ee44d2521:41037078,fd39c64814a75050307e05c530cda5bb:-852120068,18398288baa7505044bca29e4766976f:-975176863,972902887ba750503d7d23ea7419204c:1829142850,2d3882483fa750506da39b3cf134b8ff:90433314,34388248a2a750503f68c5a26788c3f6:-1826835745,42288a084ba75050274e513312673ff3:65735196,c42806487da750507deac4e09f0b8250:-1708001634,f1b975c8a567505085d889e8edb4104a:68784237,758931c85367505095ee2dea5ee0860f:848705781,11183548c86750509e11c58f50fbae91:-747466558,6c08f948dd6750501db8184280e5de7f:-1795755008,5ab7b908c86750506f0f3e46bf5e0787:-1094466366,25673148bc675050418d84d560a10e02:-1927911672,10673d086d675050d84780471f123e78:285650308,1e57b9083b67505072d66597171c8c82:-1238952571,a637bd8033675050694024b021b62c4f:-1919085757,43e6b908e5675050f6667e5e58b0f132:-675979432,27b13904f567505094d58a3c58a1f651:-1128373706,26bfe980176750502f7d7ea52ccb96b4:-1237242850,937f69804d675050ab74edf77ed3bf22:1028452474,b65f21809b675050f72ff4cf7aaffd02:1485847683,503f65807e675050a09e7726ad1085a2:488672341,71ea5d40bc275050967d7d7a37a9d5ed:644651595,3dda994062275050a94d547fdaa5185b:86392947,8ccad540622750507bb4d0546ac9393f:2028392380,c75a5d00cd275050cb234826d725a74e:-1031602454,58a99900862750507716b31a128e46bc:-901571733,d664d50cf7e3505044d6ad277e264096:1882483499,615459089fe350502b503bf3e05fd9eb:-901571733,2334150ceee35050c85f9ef7284b860b:-225971843,60145588fee3505005ec104cd3dedb9d:-901571733,fe8681cc5da3505090a2efee5761f448:567835189,1785cd4c8fa35050df3f3fc8b7e78877:-76412153,9d55894c54a35050531e91b0c2ab1955:-841975495,c474c14c3aa3505082598851bd510ac3:1570512939,5c34050c38a35050aa101617fddb1b75:-1818430293,b5d3050c1da3505031afa16a994edb60:1570512939,aa5285c8eaa35050eadde7b4c659d545:-1090855684,5fbfb80893a350508f6bc250f7d7eaff:708478876,9558f6fb65db1050c31ed7054337d7e6:-1303155684,723836fb2adb1050cffa398b0af1ce29:1568883776,2218febb5edb1050632e121efb229259:-1303155684,2645f63bb5db105048fb084a2df32498:270825649,5835f23b54db10502d7fad805728bce8:-1286854845,69053e37cddb10503e8d2ff40ff077f9:648156651,08f43e37ccdb10504702202b16e7f9c8:442833131,7c903e374ddb105046a39e9decf7e481:648156651,9f80fa37e7db10504114cde621995a98:1749314251,0b835a7f865b1050828ac63edd431b09:1802954539,73739a3f105b10507f27cb10d4a3f072:1731422763,12435e3f9a5b1050d2c4a028b02162d9:1802954539,fbf2527f495b10505e06536bfe5fe4d7:1594424804,53d25e3f465b1050a87090464ced1bd3:-986256734,9a829a3f2e5b10507867b90a004221e4:-895870586,6f12923f9f5b105090decc77976de700:463871334,a012523fc35b105084b13da4e2ae5d2d:1263915580,2cc15afbc05b1050cb19dabf636273b6:-709835378,a7f0dabb875b10509099f6fcf674b686:-1999588445,64e05abbfe5b10509f9bf6f81c013858:-1604860799,52301e7b6f5b1050c231de232bbcf722:-56652827,b5bd42f7545b1050ece22a578ce470c7:-1726098112,74574a73e15b105044526a0f7aca650e:-389742421,24d8bdf3e51b105063cdfcbb5428c5b4:927503991,02c83137fe1b105086e3dc0395882484:-1488369643,6eb83137071b105076a30b8e870a2a80:-1703750882,4da83137971b10504eba5d88f46a2b63:-1488369643,0d6c79f64c175c101532c9f9d70ce6d9:927503991,1f3c3d7a37175c10ff10eb468ebfed27:461313892,dd1979b629175c108e6dba3098827d0f:-122579309,37c835b67e175c102871ed83fdefa757:-710290104,c5487d7662175c10a23c59c97cb18cec:-122579309,ea38717668175c104db354a2d34d98f4:-710290104,e018f976ba175c102528ad2773b2e01b:-122579309,e208b976ab175c10770d6fd329d1f084:-710290104,64f7b576ca175c101514374d09eb1308:-122579309,4c53b5bee7d35c1032d4554fe26ed8bb:-703390018,7a92bdfe24d35c10501a2a87ec4c138e:1084179864</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">c37122482fe750507e72821df699b63a</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-24 18:34:54</sys_created_on>
+        <sys_db_object display_value="" name="x_8821_code_code_snippet">x_8821_code_code_snippet</sys_db_object>
+        <sys_id>25933c4a62e74f1d884f0cff0550cd89</sys_id>
+        <sys_metadata>1722bdfe2fd35c107e72821df699b6a3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Format Phone Number</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_scope_delete display_value="">2f952166b84d4492b77d2b80ba54eeb1</sys_scope_delete>
+        <sys_update_name>x_8821_code_code_snippet_1722bdfe2fd35c107e72821df699b6a3</sys_update_name>
+        <sys_update_version display_value="x_8821_code_code_snippet_1722bdfe2fd35c107e72821df699b6a3">11391a082fe750507e72821df699b667</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-24 18:34:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

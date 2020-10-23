@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>a5dce1ee2f571c107e72821df699b688</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_8821_code_application_file">
+    <x_8821_code_application_file action="INSERT_OR_UPDATE">
+        <context>client</context>
+        <label>UI Action</label>
+        <name>sys_ui_action</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-19 22:54:01</sys_created_on>
+        <sys_id>a5dce1ee2f571c107e72821df699b688</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-20 03:52:08</sys_updated_on>
+    </x_8821_code_application_file>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-25 16:21:57</sys_created_on>
+        <sys_id>15ac87542f2b90507e72821df699b6e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>UI Action</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>sys_metadata_link_15ac87542f2b90507e72821df699b6e7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-25 16:21:57</sys_updated_on>
+        <tablename>x_8821_code_application_file</tablename>
+    </sys_metadata_link>
+</record_update>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_8821_code_code_snippet">
+    <x_8821_code_code_snippet action="INSERT_OR_UPDATE">
+        <applicable_in_application_files>e0cc21ee2f571c107e72821df699b604,f1cc69ae2f571c107e72821df699b680,ab9c69ae2f571c107e72821df699b658,7ecce1ee2f571c107e72821df699b64e,75b339191b6bdc10fbdb78cf034bcbbb,378035e22f971c107e72821df699b693,fb22b1662f971c107e72821df699b6ac,631271662f971c107e72821df699b6bc</applicable_in_application_files>
+        <applicable_in_context>server</applicable_in_context>
+        <client_script><![CDATA[// To make code snippet able to test "Sample Input":
+
+// fnName(arg1, arg2, arg3);
+// function fnName(arg1, arg2, arg3) {
+    // Code to execute
+    // return <result>;
+// }]]></client_script>
+        <css/>
+        <description>Most scheduled jobs are set up to run on a scheduled or on-demand basis.  However, you may want certain scheduled jobs to run when triggered by a business rule, UI Action, or other server-side context.  Below is a snippet of code that can be used to do it.</description>
+        <jelly_script/>
+        <link/>
+        <name>How to Execute a Scheduled Job from a Business Rule or UI Action (GLOBAL)</name>
+        <option_schema/>
+        <sample_input>{&#13;
+"scriptSysID":  ""&#13;
+}</sample_input>
+        <sample_output_client/>
+        <sample_output_server/>
+        <server_script><![CDATA[// To make code snippet able to test "Sample Input":
+
+// fnName(arg1, arg2, arg3);
+// function fnName(arg1, arg2, arg3) {
+// Code to execute
+// return <result>;
+// }
+
+runScheduledScriptJob(scriptSysID);
+
+function runScheduledScriptJob(scriptSysID){
+	//Execute a scheduled script job  
+	var rec = new GlideRecord('sysauto_script');  
+	rec.get('sys_id', scriptSysID); // Sys_ID of Scheduled Job being executed.  Because names of scheduled jobs often change, it is preferable to use the sys_id  
+
+	if (typeof SncTriggerSynchronizer != 'undefined')  
+		SncTriggerSynchronizer.executeNow(rec);  
+	else  
+		Packages.com.snc.automation.TriggerSynchronizer.executeNow(rec);  
+
+}]]></server_script>
+        <sys_class_name>x_8821_code_code_snippet</sys_class_name>
+        <sys_created_by>alex.chansuthus@infocenter.io</sys_created_by>
+        <sys_created_on>2020-09-28 12:36:53</sys_created_on>
+        <sys_id>93f479191b6bdc10fbdb78cf034bcbe5</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>How to Execute a Scheduled Job from a Business Rule or UI Action (GLOBAL)</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>x_8821_code_code_snippet_93f479191b6bdc10fbdb78cf034bcbe5</sys_update_name>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-23 03:09:03</sys_updated_on>
+        <template/>
+    </x_8821_code_code_snippet>
+</record_update>

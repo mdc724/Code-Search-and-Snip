@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>sysverb_eval_sample_server</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>current.applicable_in_context == "client_server" || current.applicable_in_context == "server"</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style>primary</form_style>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Evaluate Sample (Server)</name>
+        <onclick/>
+        <order>-1000</order>
+        <script><![CDATA[// Declare evaluator script for evaluating code
+var evaluator = new GlideScopedEvaluator();
+
+// Parse keys and values out of "sample input" JSON field
+var jsonObject = "'" + current.sample_input.toString() + "'";
+var parsedObject = new global.JSON().decode(jsonObject);
+var objectVariables = (Object.keys(parsedObject));
+for (var i = 0; i < objectVariables.length; i++) {
+	var key = objectVariables[i];
+	var value = parsedObject[key];
+	
+	evaluator.putVariable(key, value);
+}
+
+// Evaluate server_script and output result in "sample output server"
+current.sample_output_server = evaluator.evaluateScript(current, 'server_script', {x: {}});
+current.update();
+
+// Refresh in place
+action.setRedirectURL(current);
+
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-23 22:31:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>facd4ef72f5b10507e72821df699b601</sys_id>
+        <sys_mod_count>85</sys_mod_count>
+        <sys_name>Evaluate Sample (Server)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>sys_ui_action_facd4ef72f5b10507e72821df699b601</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-24 21:51:16</sys_updated_on>
+        <table>x_8821_code_code_snippet</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_8821_code_code_snippet">
+    <x_8821_code_code_snippet action="INSERT_OR_UPDATE">
+        <applicable_in_application_files>c03acfd11b6fdc10fbdb78cf034bcb80</applicable_in_application_files>
+        <applicable_in_context>server</applicable_in_context>
+        <client_script><![CDATA[// To make code snippet able to test "Sample Input":
+
+// fnName(arg1, arg2, arg3);
+// function fnName(arg1, arg2, arg3) {
+    // Code to execute
+    // return <result>;
+// }]]></client_script>
+        <css/>
+        <description>Sometimes when error logs are captured, the system shows unnamed sys_ids without any extra context. These sys_ids often are configurations that are failing in the tool, but the system doesn't make it easy to identify what name or type of script they are.&#13;
+&#13;
+1.	Define the searchSysId of the script below with the sys_id you are trying to identify from the log.&#13;
+2.	Run this code as a Background Script.&#13;
+3.	The Background Script should return the sys_id, name, and table where the configuration resides.  Note this code will NOT work for just any sys_id.  It does not work for searching Task or Task-extended records, for example.  It only works for identifying failed configuration artifacts.&#13;
+</description>
+        <jelly_script/>
+        <link/>
+        <name>How to Search for a Configuration Artifact by Sys_ID</name>
+        <option_schema/>
+        <sample_input>{&#13;
+"searchSysId":  "87d3b08093010200ea933007f67ffb8g"&#13;
+}</sample_input>
+        <sample_output_client/>
+        <sample_output_server/>
+        <server_script><![CDATA[getConfigID(searchSysId);
+
+function getConfigID(searchSysId){
+	var found = false;  //Found is false until a record is located
+
+	//Searches the metadata table for the sys_id, returns table information if matched 
+	var metadataGR = new GlideRecord('sys_metadata');  
+	metadataGR.addQuery('sys_id', searchSysId);  
+	metadataGR.query();  
+	if (metadataGR.next()) {  
+		var className = metadataGR.getValue("sys_class_name");  
+
+		//If there is a metadata record, query the source table for the record
+		var grTarget = new GlideRecord(metadataGR.getValue("sys_class_name")); 
+		grTarget.addQuery('sys_id',searchSysId);
+		grTarget.query();  
+		//If there is a match record on the source table, add message for sys_id, name, and table
+		if (grTarget.next()) {  
+			gs.addInfoMessage("******* Information Found *******\n"+"Sys ID:\t" + grTarget.sys_id+"\nName:\t" + grTarget.name + "\nTable:\t" + className);  
+			found = true;   
+		}
+	}  
+	if (found == false) {  
+		gs.addInfoMessage("No records found with this sys_id");  
+	} 
+}]]></server_script>
+        <sys_class_name>x_8821_code_code_snippet</sys_class_name>
+        <sys_created_by>alex.chansuthus@infocenter.io</sys_created_by>
+        <sys_created_on>2020-09-28 18:11:41</sys_created_on>
+        <sys_id>57de36d91b2fdc10fbdb78cf034bcbf3</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>How to Search for a Configuration Artifact by Sys_ID</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>x_8821_code_code_snippet_57de36d91b2fdc10fbdb78cf034bcbf3</sys_update_name>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-23 03:09:33</sys_updated_on>
+        <template/>
+    </x_8821_code_code_snippet>
+</record_update>

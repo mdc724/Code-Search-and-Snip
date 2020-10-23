@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>false</active>
+        <admin_overrides>false</admin_overrides>
+        <advanced>true</advanced>
+        <condition/>
+        <description>Default access control on x_8821_code_code_snippet</description>
+        <name>x_8821_code_code_snippet.*</name>
+        <operation display_value="write">write</operation>
+        <script><![CDATA[if (gs.getUserName() == current.sys_created_by || current.isNewRecord())
+	answer = true;
+else
+	answer = false;
+
+]]></script>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-20 02:54:41</sys_created_on>
+        <sys_id>efe3eea22f5b1c107e72821df699b62c</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>x_8821_code_code_snippet.*</sys_name>
+        <sys_package display_value="Code" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>sys_security_acl_efe3eea22f5b1c107e72821df699b62c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-24 20:00:52</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</application>
+        <file_path/>
+        <instance_id>c813d5c6db785850e03ad7c8f49619d6</instance_id>
+        <instance_name>dev103825</instance_name>
+        <name>sys_security_acl_efe3eea22f5b1c107e72821df699b62c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_security_acl"&gt;&lt;sys_security_acl action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;admin_overrides&gt;false&lt;/admin_overrides&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;condition/&gt;&lt;description&gt;Default access control on x_8821_code_code_snippet&lt;/description&gt;&lt;name&gt;x_8821_code_code_snippet.*&lt;/name&gt;&lt;operation display_value="write"&gt;write&lt;/operation&gt;&lt;script&gt;&lt;![CDATA[if (gs.getUserName() == current.sys_created_by || current.isNewRecord())
+	answer = true;
+else
+	answer = false;
+
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_security_acl&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-09-20 02:54:41&lt;/sys_created_on&gt;&lt;sys_id&gt;efe3eea22f5b1c107e72821df699b62c&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name&gt;x_8821_code_code_snippet.*&lt;/sys_name&gt;&lt;sys_package display_value="Code" source="x_8821_code"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Code"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_security_acl_efe3eea22f5b1c107e72821df699b62c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-09-24 20:00:52&lt;/sys_updated_on&gt;&lt;type display_value="record"&gt;record&lt;/type&gt;&lt;/sys_security_acl&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1410475108</payload_hash>
+        <record_name>x_8821_code_code_snippet.*</record_name>
+        <reverted_from/>
+        <source>b35be34d2f5fd4107e72821df699b67f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-24 20:00:52</sys_created_on>
+        <sys_id>5e25fe802f6b50507e72821df699b6f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>174c1b44cc90000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-24 20:00:52</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>d625fe80626b5050aede7c4a00c42df8</update_guid>
+        <update_guid_history>d625fe80626b5050aede7c4a00c42df8:1410475108,b314fa40406b5050eecb81b96b3faaae:-1972343125,efe33640de6b505068f2e2554ce30828:-287905116,136331bf27d71050b5b576a7475d66c4:-2113179541,b8c1f9fbc4d71050c77bf395be3e28bd:256292150,c7f562a65c5b1c10775770619f6a6bbe:-2141372970,a3e3eea2f05b1c10d26a8b5e21cf752f:-1780894971</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-24 20:03:35</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>d153c8f1342643ae80a87c30f99a8ce9</sys_id>
+        <sys_metadata>efe3eea22f5b1c107e72821df699b62c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_8821_code_code_snippet.*</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_parent display_value="">a7e3eea22f5b1c107e72821df699b645</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_scope_delete display_value="">2f952166b84d4492b77d2b80ba54eeb1</sys_scope_delete>
+        <sys_update_name>sys_security_acl_efe3eea22f5b1c107e72821df699b62c</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_efe3eea22f5b1c107e72821df699b62c">5e25fe802f6b50507e72821df699b6f8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-24 20:03:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>applicable_in_context</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Show Field Msg for Client/Server</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+
+	g_form.hideFieldMsg("client_script");
+	g_form.hideFieldMsg("server_script");
+	
+	
+	if (g_form.getValue("applicable_in_context") == "client_server") {
+		g_form.showFieldMsg("client_script", "To be applicable in Client/Server Context, Client script should mirror the code of the Server script.  To test, evaluate that the sample input produces the same output when executed both with the Client script and with the Server script.");
+		g_form.showFieldMsg("server_script", "To be applicable in Client/Server Context, Server script should mirror the code of the Client script.  To test, evaluate that the sample input produces the same output when executed both with the Client script and with the Server script.");
+	}
+}
+
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-24 19:08:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>701926842f2b50507e72821df699b6ad</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Show Field Msg for Client/Server</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>sys_script_client_701926842f2b50507e72821df699b6ad</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-24 19:12:51</sys_updated_on>
+        <table>x_8821_code_code_snippet</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

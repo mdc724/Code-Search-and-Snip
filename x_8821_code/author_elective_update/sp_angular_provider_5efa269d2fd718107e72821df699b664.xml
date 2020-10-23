@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_angular_provider">
+    <sp_angular_provider action="DELETE">
+        <name>highlighterFactory</name>
+        <script><![CDATA[function highlighterFactory() {
+	
+	return {
+		
+		highlight: function(value) {
+			var re = new RegExp(value, 'gi'); //'gi' for case insensitive and can use 'g' if you want the search to be case sensitive.
+			return value.replace(re, "<mark>$&</mark>");
+		}
+		
+		/*
+		restrict: "A",
+		require: "ngModel",
+		link: function (scope, element, attrs, ngModelCtrl) {
+			var parent = $(element).parent();
+			var dtp = parent.datetimepicker({
+				format: scope.data.dateTimeFormat,
+				showTodayButton: true,
+				useCurrent: false
+			});
+			dtp.on("dp.change", function (e) {
+				ngModelCtrl.$setViewValue(moment(e.date).format(scope.data.dateTimeFormat));
+				scope.$apply();
+			});
+		}
+		*/
+	};
+}
+
+
+
+
+//function($timeout, $rootScope) {
+	//return {
+		
+		/*template: '<div>' +
+					'<div class="hidden-xs" ng-class="{scale_center: data.isKioskSurvey}" role="radiogroup" aria-label="{{::field.label}}">' +
+						'<div ng-repeat="c in field.choices track by $index">' +
+							'<label class="sps-scale-radio-label">'+
+								'<input type="radio" name="{{field.name}}" elem-id="{{::c.sys_id}}" value="{{c.value}}" aria-checked="{{field.value == c.value}}" ng-model="field.value" ng-checked="field.value == c.value" ng-disabled="c.isDisabled || field.isReadonly()" style="margin-right: 1rem;" ng-change="c.isDisabled || selectChoice(c)" />' +'{{c.label}}'+
+							'</label>' +
+						'</div>' +
+					'</div>' +
+					'<sp-survey-end-notes data="data">' +
+					'</sp-survey-end-notes>' +
+					'<div class="visible-xs" role="radiogroup" aria-label="{{::field.label}}">' +
+						'<div ng-repeat="c in field.choices track by $index" class="wrapper-xs">' +
+							'<button class="btn btn-block" elem-id="{{mobilePrefix}}{{::c.sys_id}}" ng-click="field.value = c.value" ng-class="field.value == c.value ? \'btn-primary\' : \'btn-default\'">{{c.label}}</button>' +
+						'</div>' +
+					'</div>' +
+					'<sp-survey-add-info ng-if="field.allow_add_info && field.type != \'template\'" field="field"></sp-survey-add-info>' +
+				'</div>',*/
+		//restrict: 'E',
+		//replace: true,
+		//require: '?ngModel',
+		/*scope: {
+			'field': '=',
+			'mobilePrefix': '=',
+			'data': '=',
+			'c': '='
+		},*/
+		//controller: function(value) {
+			
+		/*return haystack.replace(new RegExp(needle.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1"), "gi"), function(match) {
+			return '<span class="highlight mark">' + match + '</span>';
+		});*/
+			
+			
+			//if (!args) {return value;}
+			//var re = new RegExp(value, 'gi'); //'gi' for case insensitive and can use 'g' if you want the search to be case sensitive.
+			//return value.replace(re, "<mark>$&</mark>");
+		//}
+	//};
+//}
+
+]]></script>
+        <sys_class_name>sp_angular_provider</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-16 06:13:19</sys_created_on>
+        <sys_id>5efa269d2fd718107e72821df699b664</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>highlighterFactory</sys_name>
+        <sys_package display_value="Code" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>sp_angular_provider_5efa269d2fd718107e72821df699b664</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-16 06:31:52</sys_updated_on>
+        <type>factory</type>
+    </sp_angular_provider>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</application>
+        <file_path/>
+        <instance_id>c813d5c6db785850e03ad7c8f49619d6</instance_id>
+        <instance_name>dev103825</instance_name>
+        <name>sp_angular_provider_5efa269d2fd718107e72821df699b664</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_angular_provider"&gt;&lt;sp_angular_provider action="INSERT_OR_UPDATE"&gt;&lt;name&gt;highlighterFactory&lt;/name&gt;&lt;script&gt;&lt;![CDATA[function highlighterFactory() {
+	
+	return {
+		
+		highlight: function(value) {
+			var re = new RegExp(value, 'gi'); //'gi' for case insensitive and can use 'g' if you want the search to be case sensitive.
+			return value.replace(re, "&lt;mark&gt;$&amp;&lt;/mark&gt;");
+		}
+		
+		/*
+		restrict: "A",
+		require: "ngModel",
+		link: function (scope, element, attrs, ngModelCtrl) {
+			var parent = $(element).parent();
+			var dtp = parent.datetimepicker({
+				format: scope.data.dateTimeFormat,
+				showTodayButton: true,
+				useCurrent: false
+			});
+			dtp.on("dp.change", function (e) {
+				ngModelCtrl.$setViewValue(moment(e.date).format(scope.data.dateTimeFormat));
+				scope.$apply();
+			});
+		}
+		*/
+	};
+}
+
+
+
+
+//function($timeout, $rootScope) {
+	//return {
+		
+		/*template: '&lt;div&gt;' +
+					'&lt;div class="hidden-xs" ng-class="{scale_center: data.isKioskSurvey}" role="radiogroup" aria-label="{{::field.label}}"&gt;' +
+						'&lt;div ng-repeat="c in field.choices track by $index"&gt;' +
+							'&lt;label class="sps-scale-radio-label"&gt;'+
+								'&lt;input type="radio" name="{{field.name}}" elem-id="{{::c.sys_id}}" value="{{c.value}}" aria-checked="{{field.value == c.value}}" ng-model="field.value" ng-checked="field.value == c.value" ng-disabled="c.isDisabled || field.isReadonly()" style="margin-right: 1rem;" ng-change="c.isDisabled || selectChoice(c)" /&gt;' +'{{c.label}}'+
+							'&lt;/label&gt;' +
+						'&lt;/div&gt;' +
+					'&lt;/div&gt;' +
+					'&lt;sp-survey-end-notes data="data"&gt;' +
+					'&lt;/sp-survey-end-notes&gt;' +
+					'&lt;div class="visible-xs" role="radiogroup" aria-label="{{::field.label}}"&gt;' +
+						'&lt;div ng-repeat="c in field.choices track by $index" class="wrapper-xs"&gt;' +
+							'&lt;button class="btn btn-block" elem-id="{{mobilePrefix}}{{::c.sys_id}}" ng-click="field.value = c.value" ng-class="field.value == c.value ? \'btn-primary\' : \'btn-default\'"&gt;{{c.label}}&lt;/button&gt;' +
+						'&lt;/div&gt;' +
+					'&lt;/div&gt;' +
+					'&lt;sp-survey-add-info ng-if="field.allow_add_info &amp;&amp; field.type != \'template\'" field="field"&gt;&lt;/sp-survey-add-info&gt;' +
+				'&lt;/div&gt;',*/
+		//restrict: 'E',
+		//replace: true,
+		//require: '?ngModel',
+		/*scope: {
+			'field': '=',
+			'mobilePrefix': '=',
+			'data': '=',
+			'c': '='
+		},*/
+		//controller: function(value) {
+			
+		/*return haystack.replace(new RegExp(needle.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1"), "gi"), function(match) {
+			return '&lt;span class="highlight mark"&gt;' + match + '&lt;/span&gt;';
+		});*/
+			
+			
+			//if (!args) {return value;}
+			//var re = new RegExp(value, 'gi'); //'gi' for case insensitive and can use 'g' if you want the search to be case sensitive.
+			//return value.replace(re, "&lt;mark&gt;$&amp;&lt;/mark&gt;");
+		//}
+	//};
+//}
+
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sp_angular_provider&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-09-16 06:13:19&lt;/sys_created_on&gt;&lt;sys_id&gt;5efa269d2fd718107e72821df699b664&lt;/sys_id&gt;&lt;sys_mod_count&gt;19&lt;/sys_mod_count&gt;&lt;sys_name&gt;highlighterFactory&lt;/sys_name&gt;&lt;sys_package display_value="Code" source="x_8821_code"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Code"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_angular_provider_5efa269d2fd718107e72821df699b664&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-09-16 06:31:52&lt;/sys_updated_on&gt;&lt;type&gt;factory&lt;/type&gt;&lt;/sp_angular_provider&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1090010905</payload_hash>
+        <record_name>highlighterFactory</record_name>
+        <reverted_from/>
+        <source>b35be34d2f5fd4107e72821df699b67f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-16 06:31:53</sys_created_on>
+        <sys_id>314f6e512f1b18107e72821df699b64a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>174959cc3b30000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-16 06:31:53</sys_updated_on>
+        <type>Widget Angular Provider</type>
+        <update_guid>b94f6e51fa1b18101e5cd0dbed887849</update_guid>
+        <update_guid_history>b94f6e51fa1b18101e5cd0dbed887849:-1090010905,befea651c81b1810623d56838059043c:763713148,5cfee211031b1810286f939fa7f05368:-42566991,4aeea6511f1b1810361403716089d739:138187079,19eee211941b18103305a2d70acef565:-231169662,6dedae11f81b1810800e6d349cb6be97:-1096183848,1dddeeddf0d71810987e0c8c8ba76fd9:-97406616,6bcce69dd1d71810a6cfdcfe6bf027cd:-1793673749,339ca2dd3bd71810606c93a1497fea11:144124371,432ce2ddacd718100636c69e0593cd6b:-364493250,5feb62dd0ed718102a0225bc921ed6b2:-273719045,b3db62dda8d71810a176dd5a3a15045b:-522420037,7acbee9dbad7181050678157c172c28e:-273719045,59abaa9de5d718108d5e744861463a22:-1553668777,589b269dc8d71810876869f085e3b4f1:-1629821377,518b2a9dfbd71810c2f9fdc7c93f064b:-1611051803,cd5be69d01d7181041d847bc2505ecd4:-2135607035,614be69dabd7181028eabc2d8e890277:-1612490145,723b269db1d71810bc683c552abebfed:-806210006,0e0be29d08d71810cc4414e39a39c8e6:-2135607035</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">d2d5f2192f1b18107e72821df699b654</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-16 07:00:35</sys_created_on>
+        <sys_db_object display_value="" name="sp_angular_provider">sp_angular_provider</sys_db_object>
+        <sys_id>0c278c6a5b8f43e68855a89e48049424</sys_id>
+        <sys_metadata>5efa269d2fd718107e72821df699b664</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>highlighterFactory</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_scope_delete display_value="">2f952166b84d4492b77d2b80ba54eeb1</sys_scope_delete>
+        <sys_update_name>sp_angular_provider_5efa269d2fd718107e72821df699b664</sys_update_name>
+        <sys_update_version display_value="sp_angular_provider_5efa269d2fd718107e72821df699b664">314f6e512f1b18107e72821df699b64a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-16 07:00:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

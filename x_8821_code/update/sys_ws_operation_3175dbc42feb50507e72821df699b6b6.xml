@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>search</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	
+	var empty = "value not provided";
+	
+    //The api returns some strings as NativeArrays which is not ideal
+	var term = getParamAsString("term");
+	var table = getParamAsString("table");
+	var limit = getParamAsString("limit");
+	var search_group = getParamAsString("search_group");
+    var search_all_scopes = getParamAsString("search_all_scopes");
+	var current_app = getParamAsString("current_app");
+	var extended_matching = getParamAsString("extended_matching");
+
+	//lets help a dev debug
+	gs.debug("Search term is {0}", term ? term : empty);
+	gs.debug("Search against table {0}", table ? table : empty);
+	gs.debug("In search group {0}", search_group ? search_group : empty);
+	gs.debug("With requested limit {0}", limit ? limit : empty);
+	gs.debug("Search all app scopes: {0}", search_all_scopes ? search_all_scopes : empty);
+	gs.debug("Home scope is {0}", current_app ? current_app : empty);
+	gs.debug("Use extended matching is {0}", extended_matching ? extended_matching : empty);
+	
+    if (!search_all_scopes || search_all_scopes == "false")
+        search_all_scopes = false;
+	
+	var searcher = CodeSearch()
+					.setSearchGroup(search_group)
+					.setSearchAllScopes(search_all_scopes)
+					.setSearchTable(table)
+					.setCurrentApplication(current_app)
+					.setExtendedMatching(extended_matching);
+	
+	//allow requests to specify a limit, always less than our max
+	if (limit)
+		searcher.setLimit(limit);
+	
+	gs.info("Initiating search for {0} from search API.", term);
+	
+	//We want to keep the browser from caching these responses
+	response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate,max-age=-1");
+	response.setHeader("Pragma", "no-store,no-cache");
+	response.setHeader("Expires","Thu, 01 Jan 1970 00:00:00");
+	
+	return searcher.search(term);
+	
+	//make sure we always get strings from the parameter map
+	function getParamAsString(paramName) {
+		if (request.queryParams.hasOwnProperty(paramName))
+			return request.queryParams[paramName] + '';
+
+		return '';
+	}
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_8821_code/code_search/search</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/search</relative_path>
+        <request_example/>
+        <requires_acl_authorization>false</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-24 22:22:44</sys_created_on>
+        <sys_id>3175dbc42feb50507e72821df699b6b6</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>search</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>sys_ws_operation_3175dbc42feb50507e72821df699b6b6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-25 16:19:04</sys_updated_on>
+        <web_service_definition display_value="Code Search">f1a41b842feb50507e72821df699b6f3</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="DELETE">
+        <active>true</active>
+        <conditions table="x_8821_code_code_snippet">applicable_in_context=client^EQ<item display_value="Client" endquery="false" field="applicable_in_context" goto="false" newquery="false" operator="=" or="false" value="client"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>Applicable in Context is Client</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-20 03:25:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b3caeeaa2f5b1c107e72821df699b66a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Applicable in Context is Client</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Code" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>sys_ui_policy_b3caeeaa2f5b1c107e72821df699b66a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-20 17:09:45</sys_updated_on>
+        <table>x_8821_code_code_snippet</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</application>
+        <file_path/>
+        <instance_id>c813d5c6db785850e03ad7c8f49619d6</instance_id>
+        <instance_name>dev103825</instance_name>
+        <name>sys_ui_policy_b3caeeaa2f5b1c107e72821df699b66a</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_policy"&gt;&lt;sys_ui_policy action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;conditions table="x_8821_code_code_snippet"&gt;applicable_in_context=client^EQ&lt;item display_value="Client" endquery="false" field="applicable_in_context" goto="false" newquery="false" operator="=" or="false" value="client"/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/conditions&gt;&lt;description/&gt;&lt;global&gt;true&lt;/global&gt;&lt;inherit&gt;false&lt;/inherit&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;model_id/&gt;&lt;model_table/&gt;&lt;on_load&gt;true&lt;/on_load&gt;&lt;order&gt;100&lt;/order&gt;&lt;reverse_if_false&gt;true&lt;/reverse_if_false&gt;&lt;run_scripts&gt;false&lt;/run_scripts&gt;&lt;script_false&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_false&gt;&lt;script_true&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_true&gt;&lt;set_values/&gt;&lt;short_description&gt;Applicable in Context is Client&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ui_policy&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-09-20 03:25:25&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;b3caeeaa2f5b1c107e72821df699b66a&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;Applicable in Context is Client&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Code" source="x_8821_code"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Code"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_policy_b3caeeaa2f5b1c107e72821df699b66a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-09-20 17:09:45&lt;/sys_updated_on&gt;&lt;table&gt;x_8821_code_code_snippet&lt;/table&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_ui_policy&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-59216964</payload_hash>
+        <record_name>Applicable in Context is Client</record_name>
+        <reverted_from/>
+        <source>b35be34d2f5fd4107e72821df699b67f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-20 17:09:45</sys_created_on>
+        <sys_id>b8a7a5762fd35c107e72821df699b69f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>174ac7e315b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-20 17:09:45</sys_updated_on>
+        <type>UI Policy</type>
+        <update_guid>b0a7a576c9d35c10b87bb999ccf1579f</update_guid>
+        <update_guid_history>b0a7a576c9d35c10b87bb999ccf1579f:-59216964,71b6693608d35c10942192bd26e99887:-561905292,8da6e5360ed35c10c509400a896c6cb2:353860454,65fa62eaf05b1c10b3deae943062e583:-409257566</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-20 17:09:51</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy">sys_ui_policy</sys_db_object>
+        <sys_id>5fb3dd12d91c480e8554890e4b6fd241</sys_id>
+        <sys_metadata>b3caeeaa2f5b1c107e72821df699b66a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Applicable in Context is Client</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_parent display_value="Code Snippet">79d36ea22f5b1c107e72821df699b6d1</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_scope_delete display_value="">2f952166b84d4492b77d2b80ba54eeb1</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_b3caeeaa2f5b1c107e72821df699b66a</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_b3caeeaa2f5b1c107e72821df699b66a">b8a7a5762fd35c107e72821df699b69f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-20 17:09:51</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

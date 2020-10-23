@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_dependency_css_include">
+    <m2m_sp_dependency_css_include action="DELETE">
+        <order>100</order>
+        <sp_css_include display_value="enlighterjs.beyond.min">9fd4fb452f9fd4107e72821df699b6fb</sp_css_include>
+        <sp_dependency display_value="EnlighterJS">18b33b052f9fd4107e72821df699b61c</sp_dependency>
+        <sys_class_name>m2m_sp_dependency_css_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-15 16:58:19</sys_created_on>
+        <sys_id>2415fb452f9fd4107e72821df699b622</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>enlighterjs.beyond.min.EnlighterJS</sys_name>
+        <sys_package display_value="Code" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>m2m_sp_dependency_css_include_2415fb452f9fd4107e72821df699b622</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-15 16:58:19</sys_updated_on>
+    </m2m_sp_dependency_css_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</application>
+        <file_path/>
+        <instance_id>c813d5c6db785850e03ad7c8f49619d6</instance_id>
+        <instance_name>dev103825</instance_name>
+        <name>m2m_sp_dependency_css_include_2415fb452f9fd4107e72821df699b622</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_dependency_css_include"><m2m_sp_dependency_css_include action="INSERT_OR_UPDATE"><order>100</order><sp_css_include display_value="enlighterjs.beyond.min">9fd4fb452f9fd4107e72821df699b6fb</sp_css_include><sp_dependency display_value="EnlighterJS">18b33b052f9fd4107e72821df699b61c</sp_dependency><sys_class_name>m2m_sp_dependency_css_include</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-09-15 16:58:19</sys_created_on><sys_id>2415fb452f9fd4107e72821df699b622</sys_id><sys_mod_count>0</sys_mod_count><sys_name>enlighterjs.beyond.min.EnlighterJS</sys_name><sys_package display_value="Code" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package><sys_policy/><sys_scope display_value="Code">0f7b73c4dba433007d159235ca96197c</sys_scope><sys_update_name>m2m_sp_dependency_css_include_2415fb452f9fd4107e72821df699b622</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-09-15 16:58:19</sys_updated_on></m2m_sp_dependency_css_include></record_update>]]></payload>
+        <payload_hash>-615989216</payload_hash>
+        <record_name>enlighterjs.beyond.min.EnlighterJS</record_name>
+        <reverted_from/>
+        <source>b35be34d2f5fd4107e72821df699b67f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-15 16:58:19</sys_created_on>
+        <sys_id>2015fb452f9fd4107e72821df699b624</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17492b3efd90000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-15 16:58:19</sys_updated_on>
+        <type>Dependency CSS Includes</type>
+        <update_guid>6815fb459e9fd410742b10568f3c5423</update_guid>
+        <update_guid_history>6815fb459e9fd410742b10568f3c5423:-615989216</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">f77266952fd718107e72821df699b65f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-16 05:36:02</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_dependency_css_include">m2m_sp_dependency_css_include</sys_db_object>
+        <sys_id>5b5d2d7eec7547ac82703a178d8caa10</sys_id>
+        <sys_metadata>2415fb452f9fd4107e72821df699b622</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>enlighterjs.beyond.min.EnlighterJS</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_scope_delete display_value="">2f952166b84d4492b77d2b80ba54eeb1</sys_scope_delete>
+        <sys_update_name>m2m_sp_dependency_css_include_2415fb452f9fd4107e72821df699b622</sys_update_name>
+        <sys_update_version display_value="m2m_sp_dependency_css_include_2415fb452f9fd4107e72821df699b622">2015fb452f9fd4107e72821df699b624</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-16 05:36:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

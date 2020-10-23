@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Application File" max_length="40" name="x_8821_code_application_file" sizeclass="35" type="collection">
+        <element choice="3" label="Context" mandatory="true" max_length="255" name="context" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Client" sequence="100" value="client"/>
+                <element inactive_on_update="false" label="Server" sequence="200" value="server"/>
+                <element inactive_on_update="false" label="Multipart/JellyScript" sequence="300" value="multipart_jellyscript"/>
+                <element inactive_on_update="false" label="Multipart/AngularJS" sequence="400" value="multipart_angularjs"/>
+            </choice>
+        </element>
+        <element display="true" label="Label" mandatory="true" max_length="255" name="label" type="string"/>
+        <element label="Name" mandatory="true" max_length="255" name="name" type="string"/>
+    </element>
+</database>

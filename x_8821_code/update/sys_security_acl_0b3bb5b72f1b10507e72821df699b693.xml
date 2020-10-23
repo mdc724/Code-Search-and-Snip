@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>false</admin_overrides>
+        <advanced>true</advanced>
+        <condition/>
+        <description>Default access control on x_8821_code_code_snippet</description>
+        <name>x_8821_code_code_snippet</name>
+        <operation display_value="delete">delete</operation>
+        <script><![CDATA[if (gs.getUserName() == current.sys_created_by)
+	answer = true;
+else
+	answer = false;
+
+]]></script>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-23 21:09:19</sys_created_on>
+        <sys_id>0b3bb5b72f1b10507e72821df699b693</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>x_8821_code_code_snippet</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>sys_security_acl_0b3bb5b72f1b10507e72821df699b693</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-25 16:32:27</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>

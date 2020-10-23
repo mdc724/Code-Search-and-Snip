@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope, $rootScope) {
+	
+	// Enhancement: Scrollable / overflow navigation menu
+	
+	/* widget controller */
+	var c = this;
+	//$scope.tables = data.tables;
+	$scope.loading = false;
+	$scope.results = {};
+	$scope.search = "";
+	$scope.hits = 0;
+	$scope.table = "All Tables"
+	$scope.table_name = ""
+	
+
+	$rootScope.$on('searchResults', function(event, searchObj) {
+		
+		$scope.loading = searchObj.scope.loading;
+		$scope.search = searchObj.scope.search;
+		$scope.hits = searchObj.scope.hits;
+
+		$scope.data = searchObj.scope.data;
+		$scope.results = searchObj.scope.results;
+		
+		$scope.table = searchObj.scope.table;
+		$scope.table_name = searchObj.scope.table_name;
+		
+	});
+};
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.navigation-menu {
+  position:fixed;
+}
+
+.panel-heading {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #428bca;
+}
+
+
+
+.row.container {
+  padding:10px;
+  background:#0A5A9C;
+  margin-top:10px;
+}
+
+.row.container:hover {
+  background:#2376BB;
+}
+
+.row.container {
+  color:white!important;
+}
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>code-navigation</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>code-navigation</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-15 22:27:33</sys_created_on>
+        <sys_id>ef5045152f9318107e72821df699b6f6</sys_id>
+        <sys_mod_count>218</sys_mod_count>
+        <sys_name>code-navigation</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>sp_widget_ef5045152f9318107e72821df699b6f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-20 19:43:35</sys_updated_on>
+        <template><![CDATA[<div class="navigation-menu">
+  <div class="panel" style="margin:0!important">
+    <h3 class="panel-title">
+      ${Application Artifacts}
+    </h3>
+    
+    <div ng-if="hits>0 && search === 'code'">
+      {{hits}} Code Matches
+    </div>
+    <br />
+  </div>
+
+
+  <a href="#codeSearch">
+    <div class="row container" ng-if="results.length > 0" style="border:1px solid rgb(225,225,225); height:65px;">
+			${CODE SEARCH}
+    </div>
+  </a>
+
+
+  <div ng-if="search!=='sysid'" ng-repeat="table in results">
+    <a href="#{{table.recordType}}" style="word-wrap: break-word;">
+      <div class="row container" ng-if="table.hits.length > 0" style="border:1px solid rgb(225,225,225); height:65px;">
+
+          {{table.tableLabel}} ({{table.recordType}})
+          <br />
+          has {{table.hits.length}} matching records.
+
+      </div>
+    </a>
+  </div>
+</div>
+
+]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_8821_code_code_snippet">
+    <x_8821_code_code_snippet action="INSERT_OR_UPDATE">
+        <applicable_in_application_files>75b339191b6bdc10fbdb78cf034bcbbb</applicable_in_application_files>
+        <applicable_in_context>server</applicable_in_context>
+        <client_script><![CDATA[// To make code snippet able to test "Sample Input":
+
+// fnName(arg1, arg2, arg3);
+// function fnName(arg1, arg2, arg3) {
+    // Code to execute
+    // return <result>;
+// }]]></client_script>
+        <css/>
+        <description>Below is an example that illustrates how to execute a workflow from a script.  This script in particular (originally enacted as a Run Script in a workflow) executes a workflow as designated from a custom reference field in the Catalog Item table.</description>
+        <jelly_script/>
+        <link/>
+        <name>How to Execute a Workflow with a Script</name>
+        <option_schema/>
+        <sample_input>//No sample</sample_input>
+        <sample_output_client/>
+        <sample_output_server/>
+        <server_script><![CDATA[// RUN SCRIPT //  
+  
+// Call catalog item reference  
+var catItemGR = new GlideRecord("sc_cat_item");  
+catItemGR.addQuery("sys_id", current.cat_item);  
+catItemGR.query();  
+if (catItemGR.next()) {  
+      
+    // Retrieve execution workflow ID  
+    var workflowID = catItemGR.getValue("u_execution_workflow");  
+      
+    // Call workflow  
+    var w = new Workflow();  
+    var contextSysID = w.startFlow(workflowID, current, current.operation()); // getVars()  
+      
+    // Get workflow context sys_id  
+    workflow.scratchpad.contextSysID = contextSysID.getValue("sys_id");  
+}  
+  
+  
+  
+  
+  
+// WAIT FOR CONDITION //  
+  
+// Set the variable 'answer' to true or false to indicate if the condition has been met or not.  
+  
+answer = false;  
+  
+// Look to see if the workflow context has been completed before continuing to the next workflow step  
+var workflowContextGR = new GlideRecord("wf_context");  
+workflowContextGR.addQuery("sys_id", workflow.scratchpad.contextSysID);  
+workflowContextGR.query();  
+while (workflowContextGR.next()) {  
+      
+    if (workflowContextGR.getValue("state") == "finished") {  
+        answer = true;  
+    }  
+}  
+]]></server_script>
+        <sys_class_name>x_8821_code_code_snippet</sys_class_name>
+        <sys_created_by>alex.chansuthus@infocenter.io</sys_created_by>
+        <sys_created_on>2020-09-28 12:26:02</sys_created_on>
+        <sys_id>abc2b9d51b6bdc10fbdb78cf034bcb0b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>How to Execute a Workflow with a Script</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>x_8821_code_code_snippet_abc2b9d51b6bdc10fbdb78cf034bcb0b</sys_update_name>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-23 03:09:17</sys_updated_on>
+        <template/>
+    </x_8821_code_code_snippet>
+</record_update>
