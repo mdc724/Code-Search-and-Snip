@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_8821_code_code_snippet">
+    <x_8821_code_code_snippet action="DELETE">
+        <applicable_in_application_files>e0cc21ee2f571c107e72821df699b604,f1cc69ae2f571c107e72821df699b680,ab9c69ae2f571c107e72821df699b658,7ecce1ee2f571c107e72821df699b64e,75b339191b6bdc10fbdb78cf034bcbbb,378035e22f971c107e72821df699b693,fb22b1662f971c107e72821df699b6ac,631271662f971c107e72821df699b6bc</applicable_in_application_files>
+        <applicable_in_context>server</applicable_in_context>
+        <client_script><![CDATA[// To make code snippet able to test "Sample Input":
+
+// fnName(arg1, arg2, arg3);
+// function fnName(arg1, arg2, arg3) {
+    // Code to execute
+    // return <result>;
+// }]]></client_script>
+        <css/>
+        <description>Most scheduled jobs are set up to run on a scheduled or on-demand basis.  However, you may want certain scheduled jobs to run when triggered by a business rule, UI Action, or other server-side context.  Below is a snippet of code that can be used to do it.</description>
+        <jelly_script/>
+        <link/>
+        <name>How to Execute a Scheduled Job from a Business Rule or UI Action (Scoped)</name>
+        <option_schema/>
+        <sample_input>{&#13;
+"scriptSysID":  ""&#13;
+}</sample_input>
+        <sample_output_client/>
+        <sample_output_server/>
+        <server_script><![CDATA[// To make code snippet able to test "Sample Input":
+
+// fnName(arg1, arg2, arg3);
+// function fnName(arg1, arg2, arg3) {
+// Code to execute
+// return <result>;
+// }
+
+runScheduledScriptJob(scriptSysID);
+
+function runScheduledScriptJob(scriptSysID){
+	//Execute a scheduled script job  
+	// Execute a scheduled script job  
+	var rec = new GlideRecord('sysauto_script');  
+	rec.get('sys_id', scriptSysID); // Sys_ID of Scheduled Job being executed.  Because names of scheduled jobs often change, it is preferable to use the sys_id  
+
+	gs.executeNow(rec);  
+
+
+}]]></server_script>
+        <sys_class_name>x_8821_code_code_snippet</sys_class_name>
+        <sys_created_by>alex.chansuthus@infocenter.io</sys_created_by>
+        <sys_created_on>2020-09-28 12:39:49</sys_created_on>
+        <sys_id>a496f5991b6bdc10fbdb78cf034bcb64</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>How to Execute a Scheduled Job from a Business Rule or UI Action (Scoped)</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>x_8821_code_code_snippet_a496f5991b6bdc10fbdb78cf034bcb64</sys_update_name>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-23 03:09:10</sys_updated_on>
+        <template/>
+    </x_8821_code_code_snippet>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</application>
+        <file_path/>
+        <instance_id>bfd5826bdb455f400e785d00cf961982</instance_id>
+        <instance_name>infocenter</instance_name>
+        <name>x_8821_code_code_snippet_a496f5991b6bdc10fbdb78cf034bcb64</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_8821_code_code_snippet"&gt;&lt;x_8821_code_code_snippet action="INSERT_OR_UPDATE"&gt;&lt;applicable_in_application_files&gt;e0cc21ee2f571c107e72821df699b604,f1cc69ae2f571c107e72821df699b680,ab9c69ae2f571c107e72821df699b658,7ecce1ee2f571c107e72821df699b64e,75b339191b6bdc10fbdb78cf034bcbbb,378035e22f971c107e72821df699b693,fb22b1662f971c107e72821df699b6ac,631271662f971c107e72821df699b6bc&lt;/applicable_in_application_files&gt;&lt;applicable_in_context&gt;server&lt;/applicable_in_context&gt;&lt;client_script&gt;&lt;![CDATA[// To make code snippet able to test "Sample Input":
+
+// fnName(arg1, arg2, arg3);
+// function fnName(arg1, arg2, arg3) {
+    // Code to execute
+    // return &lt;result&gt;;
+// }]]&gt;&lt;/client_script&gt;&lt;css/&gt;&lt;description&gt;Most scheduled jobs are set up to run on a scheduled or on-demand basis.  However, you may want certain scheduled jobs to run when triggered by a business rule, UI Action, or other server-side context.  Below is a snippet of code that can be used to do it.&lt;/description&gt;&lt;jelly_script/&gt;&lt;link/&gt;&lt;name&gt;How to Execute a Scheduled Job from a Business Rule or UI Action (Scoped)&lt;/name&gt;&lt;option_schema/&gt;&lt;sample_input&gt;{&amp;#13;
+"scriptSysID":  ""&amp;#13;
+}&lt;/sample_input&gt;&lt;sample_output_client/&gt;&lt;sample_output_server/&gt;&lt;server_script&gt;&lt;![CDATA[// To make code snippet able to test "Sample Input":
+
+// fnName(arg1, arg2, arg3);
+// function fnName(arg1, arg2, arg3) {
+// Code to execute
+// return &lt;result&gt;;
+// }
+
+runScheduledScriptJob(scriptSysID);
+
+function runScheduledScriptJob(scriptSysID){
+	//Execute a scheduled script job  
+	// Execute a scheduled script job  
+	var rec = new GlideRecord('sysauto_script');  
+	rec.get('sys_id', scriptSysID); // Sys_ID of Scheduled Job being executed.  Because names of scheduled jobs often change, it is preferable to use the sys_id  
+
+	gs.executeNow(rec);  
+
+
+}]]&gt;&lt;/server_script&gt;&lt;sys_class_name&gt;x_8821_code_code_snippet&lt;/sys_class_name&gt;&lt;sys_created_by&gt;alex.chansuthus@infocenter.io&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-09-28 12:39:49&lt;/sys_created_on&gt;&lt;sys_id&gt;a496f5991b6bdc10fbdb78cf034bcb64&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;How to Execute a Scheduled Job from a Business Rule or UI Action (Scoped)&lt;/sys_name&gt;&lt;sys_package display_value="Code Search and Snip" source="x_8821_code"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Code Search and Snip"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_scope&gt;&lt;sys_update_name&gt;x_8821_code_code_snippet_a496f5991b6bdc10fbdb78cf034bcb64&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mike.cornell@infocenter.io&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-10-23 03:09:10&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;/x_8821_code_code_snippet&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1396392533</payload_hash>
+        <record_name>How to Execute a Scheduled Job from a Business Rule or UI Action (Scoped)</record_name>
+        <reverted_from/>
+        <source>35f59cef1b40e810476d85507e4bcb43</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mike.cornell@infocenter.io</sys_created_by>
+        <sys_created_on>2020-10-30 01:56:00</sys_created_on>
+        <sys_id>6516d8231b80e810476d85507e4bcb26</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1757737ffbc0000001</sys_recorded_at>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-30 01:56:00</sys_updated_on>
+        <type>Code Snippet</type>
+        <update_guid>583938195ac06450bcf59029c481b959</update_guid>
+        <update_guid_history>583938195ac06450bcf59029c481b959:-1396392533</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 10-29-2020 22:23:00">cd4c9c2b1b80e810476d85507e4bcb65</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mike.cornell@infocenter.io</sys_created_by>
+        <sys_created_on>2020-10-30 02:23:00</sys_created_on>
+        <sys_db_object display_value="" name="x_8821_code_code_snippet">x_8821_code_code_snippet</sys_db_object>
+        <sys_id>41164c401d0241a4b52d4a66d22e2be4</sys_id>
+        <sys_metadata>a496f5991b6bdc10fbdb78cf034bcb64</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>How to Execute a Scheduled Job from a Business Rule or UI Action (Scoped)</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_scope_delete display_value="">2f952166b84d4492b77d2b80ba54eeb1</sys_scope_delete>
+        <sys_update_name>x_8821_code_code_snippet_a496f5991b6bdc10fbdb78cf034bcb64</sys_update_name>
+        <sys_update_version display_value="x_8821_code_code_snippet_a496f5991b6bdc10fbdb78cf034bcb64">6516d8231b80e810476d85507e4bcb26</sys_update_version>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-30 02:23:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

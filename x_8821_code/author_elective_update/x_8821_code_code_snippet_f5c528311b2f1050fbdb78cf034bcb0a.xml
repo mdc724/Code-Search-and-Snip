@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_8821_code_code_snippet">
+    <x_8821_code_code_snippet action="DELETE">
+        <applicable_in_application_files/>
+        <applicable_in_context>client_server</applicable_in_context>
+        <client_script><![CDATA[generatePW(pwLength,characters);
+
+//Generates a function that takes the password length and list of allowed characters
+function generatePW(pwLength,characters){
+	var result = '';  
+	var charactersLength = characters.length;  
+	for ( var i = 0; i < pwLength; i++ ) {  
+		result += characters.charAt(Math.floor(Math.random() * charactersLength));  
+	}
+	return result;
+}
+]]></client_script>
+        <css/>
+        <description>Being able to generate a random alphanumeric string is useful in certain contexts and scenarios, such as:&#13;
+•	To update a random, harmless field on a table in order to trigger business rules to occur on that table.&#13;
+•	Generating a temporary passcode, perhaps used to reset a user's password in conjunction with a reset notification.&#13;
+</description>
+        <jelly_script/>
+        <link/>
+        <name>How to Create a Random Passcode</name>
+        <option_schema/>
+        <sample_input>{&#13;
+"pwLength":  "15", &#13;
+"characters":  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"&#13;
+}</sample_input>
+        <sample_output_client>fmGlZpIwDVpbGZM</sample_output_client>
+        <sample_output_server>qXfbycsGFS</sample_output_server>
+        <server_script><![CDATA[generatePW(pwLength,characters);
+
+//Generates a function that takes the password length and list of allowed characters
+function generatePW(pwLength,characters){
+	var result = '';  
+	var charactersLength = characters.length;  
+	for ( var i = 0; i < 10; i++ ) {  
+		result += characters.charAt(Math.floor(Math.random() * charactersLength));  
+	}
+	return result;
+}]]></server_script>
+        <sys_class_name>x_8821_code_code_snippet</sys_class_name>
+        <sys_created_by>alex.chansuthus@infocenter.io</sys_created_by>
+        <sys_created_on>2020-09-29 20:07:01</sys_created_on>
+        <sys_id>f5c528311b2f1050fbdb78cf034bcb0a</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>How to Create a Random Passcode</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>x_8821_code_code_snippet_f5c528311b2f1050fbdb78cf034bcb0a</sys_update_name>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-23 03:08:47</sys_updated_on>
+        <template/>
+    </x_8821_code_code_snippet>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</application>
+        <file_path/>
+        <instance_id>bfd5826bdb455f400e785d00cf961982</instance_id>
+        <instance_name>infocenter</instance_name>
+        <name>x_8821_code_code_snippet_f5c528311b2f1050fbdb78cf034bcb0a</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_8821_code_code_snippet"&gt;&lt;x_8821_code_code_snippet action="INSERT_OR_UPDATE"&gt;&lt;applicable_in_application_files/&gt;&lt;applicable_in_context&gt;client_server&lt;/applicable_in_context&gt;&lt;client_script&gt;&lt;![CDATA[generatePW(pwLength,characters);
+
+//Generates a function that takes the password length and list of allowed characters
+function generatePW(pwLength,characters){
+	var result = '';  
+	var charactersLength = characters.length;  
+	for ( var i = 0; i &lt; pwLength; i++ ) {  
+		result += characters.charAt(Math.floor(Math.random() * charactersLength));  
+	}
+	return result;
+}
+]]&gt;&lt;/client_script&gt;&lt;css/&gt;&lt;description&gt;Being able to generate a random alphanumeric string is useful in certain contexts and scenarios, such as:&amp;#13;
+•	To update a random, harmless field on a table in order to trigger business rules to occur on that table.&amp;#13;
+•	Generating a temporary passcode, perhaps used to reset a user's password in conjunction with a reset notification.&amp;#13;
+&lt;/description&gt;&lt;jelly_script/&gt;&lt;link/&gt;&lt;name&gt;How to Create a Random Passcode&lt;/name&gt;&lt;option_schema/&gt;&lt;sample_input&gt;{&amp;#13;
+"pwLength":  "15", &amp;#13;
+"characters":  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"&amp;#13;
+}&lt;/sample_input&gt;&lt;sample_output_client&gt;fmGlZpIwDVpbGZM&lt;/sample_output_client&gt;&lt;sample_output_server&gt;qXfbycsGFS&lt;/sample_output_server&gt;&lt;server_script&gt;&lt;![CDATA[generatePW(pwLength,characters);
+
+//Generates a function that takes the password length and list of allowed characters
+function generatePW(pwLength,characters){
+	var result = '';  
+	var charactersLength = characters.length;  
+	for ( var i = 0; i &lt; 10; i++ ) {  
+		result += characters.charAt(Math.floor(Math.random() * charactersLength));  
+	}
+	return result;
+}]]&gt;&lt;/server_script&gt;&lt;sys_class_name&gt;x_8821_code_code_snippet&lt;/sys_class_name&gt;&lt;sys_created_by&gt;alex.chansuthus@infocenter.io&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-09-29 20:07:01&lt;/sys_created_on&gt;&lt;sys_id&gt;f5c528311b2f1050fbdb78cf034bcb0a&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name&gt;How to Create a Random Passcode&lt;/sys_name&gt;&lt;sys_package display_value="Code Search and Snip" source="x_8821_code"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Code Search and Snip"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_scope&gt;&lt;sys_update_name&gt;x_8821_code_code_snippet_f5c528311b2f1050fbdb78cf034bcb0a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mike.cornell@infocenter.io&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-10-23 03:08:47&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;/x_8821_code_code_snippet&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1267788335</payload_hash>
+        <record_name>How to Create a Random Passcode</record_name>
+        <reverted_from/>
+        <source>35f59cef1b40e810476d85507e4bcb43</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mike.cornell@infocenter.io</sys_created_by>
+        <sys_created_on>2020-10-30 01:56:00</sys_created_on>
+        <sys_id>e916d8231b80e810476d85507e4bcb36</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1757737ffed0000001</sys_recorded_at>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-30 01:56:00</sys_updated_on>
+        <type>Code Snippet</type>
+        <update_guid>d8393819a3c064503bc02ef947f5235d</update_guid>
+        <update_guid_history>d8393819a3c064503bc02ef947f5235d:1267788335</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 10-29-2020 22:23:00">494c9c2b1b80e810476d85507e4bcb6e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mike.cornell@infocenter.io</sys_created_by>
+        <sys_created_on>2020-10-30 02:23:00</sys_created_on>
+        <sys_db_object display_value="" name="x_8821_code_code_snippet">x_8821_code_code_snippet</sys_db_object>
+        <sys_id>038f85582a1041098031e83ee2f7e529</sys_id>
+        <sys_metadata>f5c528311b2f1050fbdb78cf034bcb0a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>How to Create a Random Passcode</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_scope_delete display_value="">2f952166b84d4492b77d2b80ba54eeb1</sys_scope_delete>
+        <sys_update_name>x_8821_code_code_snippet_f5c528311b2f1050fbdb78cf034bcb0a</sys_update_name>
+        <sys_update_version display_value="x_8821_code_code_snippet_f5c528311b2f1050fbdb78cf034bcb0a">e916d8231b80e810476d85507e4bcb36</sys_update_version>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-30 02:23:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -6,6 +6,7 @@
         <dynamic_title_structure/>
         <id>code_search</id>
         <internal>false</internal>
+        <omit_watcher>false</omit_watcher>
         <public>false</public>
         <roles>admin,x_8821_code.admin,x_8821_code.code_snippet_editor,x_8821_code.code_snippet_user</roles>
         <seo_script/>

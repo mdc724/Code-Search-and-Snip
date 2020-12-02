@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_8821_code_code_snippet">
+    <x_8821_code_code_snippet action="DELETE">
+        <applicable_in_application_files/>
+        <applicable_in_context>multipart_angularjs</applicable_in_context>
+        <client_script><![CDATA[// To make code snippet able to test "Sample Input":
+
+// fnName(arg1, arg2, arg3);
+// function fnName(arg1, arg2, arg3) {
+    // Code to execute
+    // return <result>;
+// }]]></client_script>
+        <css/>
+        <description>This comes up multiple times in multiple contexts – business rules, email scripts, workflow run scripts, etc.  It is the ability to take a JSON payload, parse the information, and output the result in an HTML table.&#13;
+Follow the example below to gain the knowledge on how to do this.&#13;
+</description>
+        <jelly_script/>
+        <link/>
+        <name>[Revisit] How to Construct an HTML Table from a JSON Payload (Glide Fields, Variable Payload, REST Payload)</name>
+        <option_schema/>
+        <sample_input>{&#13;
+"arg1":  "val1",&#13;
+"arg2":  "val2",&#13;
+"arg3":  "val3"&#13;
+// Add additional arguments as needed.&#13;
+// Please delete these comments before executing.&#13;
+}</sample_input>
+        <sample_output_client/>
+        <sample_output_server/>
+        <server_script><![CDATA[// To make code snippet able to test "Sample Input":
+
+// fnName(arg1, arg2, arg3);
+// function fnName(arg1, arg2, arg3) {
+    // Code to execute
+    // return <result>;
+// }]]></server_script>
+        <sys_class_name>x_8821_code_code_snippet</sys_class_name>
+        <sys_created_by>alex.chansuthus@infocenter.io</sys_created_by>
+        <sys_created_on>2020-09-29 20:24:00</sys_created_on>
+        <sys_id>062a68f11b2f1050fbdb78cf034bcb6d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>[Revisit] How to Construct an HTML Table from a JSON Payload (Glide Fields, Variable Payload, REST Payload)</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>x_8821_code_code_snippet_062a68f11b2f1050fbdb78cf034bcb6d</sys_update_name>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-23 03:09:40</sys_updated_on>
+        <template><![CDATA[<body>  
+
+  <table>  
+    <tbody id="inputTable">  
+    </tbody>  
+  </table>  
+
+  <script>    
+
+    var inputTable = document.getElementById("inputTable");    
+
+    var json = '[{"number":0,"fields":[{"displayField":"u_accept_or_deny","searchFields":"u_accept_or_deny","label":"Accept or Deny?","type":"reference","valueField":"sys_id","value":{"value":"66380ea91362b6009cd2d0528144b047","displayValue":"Accept"},"table":"u_tsc_dropdowns"},{"label":"Source*","type":"text","value":"test"},{"label":"Destination*","type":"text","value":"test"},{"displayField":"u_service","searchFields":"u_service","label":"Service","type":"reference","valueField":"sys_id","value":{"value":"494f8ccf13aef6009cd2d0528144b08b","displayValue":"UDP"},"table":"u_tsc_firewall_service"},{"label":"Applications","type":"text","value":"test"}]},{"number":1,"fields":[{"displayField":"u_accept_or_deny","searchFields":"u_accept_or_deny","label":"Accept or Deny?","type":"reference","valueField":"sys_id","value":{"value":"cb38c26d1362b6009cd2d0528144b0bd","displayValue":"Deny"},"table":"u_tsc_dropdowns"},{"label":"Source*","type":"text","value":"mike"},{"label":"Destination*","type":"text","value":"test"},{"displayField":"u_service","searchFields":"u_service","label":"Service","type":"reference","valueField":"sys_id","value":{"value":"9e4f440313eef6009cd2d0528144b091","displayValue":"ICMP"},"table":"u_tsc_firewall_service"},{"label":"Applications","type":"text","value":"jon"}]},{"number":2,"fields":[{"displayField":"u_accept_or_deny","searchFields":"u_accept_or_deny","label":"Accept or Deny?","type":"reference","valueField":"sys_id","value":{"value":"66380ea91362b6009cd2d0528144b047","displayValue":"Accept"},"table":"u_tsc_dropdowns"},{"label":"Source*","type":"text","value":"michael"},{"label":"Destination*","type":"text","value":"yeah"},{"displayField":"u_service","searchFields":"u_service","label":"Service","type":"reference","valueField":"sys_id","value":{"value":"323fc80313eef6009cd2d0528144b0e3","displayValue":"TCP"},"table":"u_tsc_firewall_service"},{"label":"Applications","type":"text","value":"jordan"}]}]';    
+
+    var parsed = JSON.parse(json);    
+
+    var currentDescription = "";    
+
+    currentDescription +=     
+      "<table><tbody>" +    
+      "<tr style='font-weight:bold'><td width='100' style='border:1px solid black'>" + parsed[0].fields[0].label +     
+      "</td><td width='100' style='border:1px solid black'>" + parsed[0].fields[1].label +     
+      "</td><td width='100' style='border:1px solid black'>" + parsed[0].fields[2].label +     
+      "</td><td width='100' style='border:1px solid black'>" + parsed[0].fields[3].label +     
+      "</td><td width='100' style='border:1px solid black'>" + parsed[0].fields[4].label + "</td></tr>";    
+
+    currentDescription +=     
+      "<tr><td width='100' style='border:1px solid black'>" + "------" +     
+      "</td><td width='100' style='border:1px solid black'>" + "------" +     
+      "</td><td width='100' style='border:1px solid black'>" + "------" +    
+      "</td><td width='100' style='border:1px solid black'>" + "------" +     
+      "</td><td width='100' style='border:1px solid black'>" + "------" + "</td></tr>";    
+
+    for (var i = 0; i < parsed.length; i++) {    
+      var acceptOrDenyVal = parsed[i].fields[0].value.displayValue;    
+      var sourceVal = parsed[i].fields[1].value;    
+      var destinationVal = parsed[i].fields[2].value;    
+      var serviceVal = parsed[i].fields[3].value.displayValue;    
+      var applicationsVal = parsed[i].fields[4].value;    
+
+      currentDescription +=     
+        "<tr><td width='100' style='border:1px solid black'>" + acceptOrDenyVal +     
+        "</td><td width='100' style='border:1px solid black'>" + sourceVal +     
+        "</td><td width='100' style='border:1px solid black'>" + destinationVal +    
+        "</td><td width='100' style='border:1px solid black'>" + serviceVal +    
+        "</td><td width='100' style='border:1px solid black'>" + applicationsVal +    
+        "</td></tr>";    
+    }    
+
+    currentDescription += "</tbody></table>";    
+    inputTable.innerHTML = currentDescription;    
+
+  </script> 
+
+</body>  
+]]></template>
+    </x_8821_code_code_snippet>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</application>
+        <file_path/>
+        <instance_id>bfd5826bdb455f400e785d00cf961982</instance_id>
+        <instance_name>infocenter</instance_name>
+        <name>x_8821_code_code_snippet_062a68f11b2f1050fbdb78cf034bcb6d</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_8821_code_code_snippet"&gt;&lt;x_8821_code_code_snippet action="INSERT_OR_UPDATE"&gt;&lt;applicable_in_application_files/&gt;&lt;applicable_in_context&gt;multipart_angularjs&lt;/applicable_in_context&gt;&lt;client_script&gt;&lt;![CDATA[// To make code snippet able to test "Sample Input":
+
+// fnName(arg1, arg2, arg3);
+// function fnName(arg1, arg2, arg3) {
+    // Code to execute
+    // return &lt;result&gt;;
+// }]]&gt;&lt;/client_script&gt;&lt;css/&gt;&lt;description&gt;This comes up multiple times in multiple contexts – business rules, email scripts, workflow run scripts, etc.  It is the ability to take a JSON payload, parse the information, and output the result in an HTML table.&amp;#13;
+Follow the example below to gain the knowledge on how to do this.&amp;#13;
+&lt;/description&gt;&lt;jelly_script/&gt;&lt;link/&gt;&lt;name&gt;[Revisit] How to Construct an HTML Table from a JSON Payload (Glide Fields, Variable Payload, REST Payload)&lt;/name&gt;&lt;option_schema/&gt;&lt;sample_input&gt;{&amp;#13;
+"arg1":  "val1",&amp;#13;
+"arg2":  "val2",&amp;#13;
+"arg3":  "val3"&amp;#13;
+// Add additional arguments as needed.&amp;#13;
+// Please delete these comments before executing.&amp;#13;
+}&lt;/sample_input&gt;&lt;sample_output_client/&gt;&lt;sample_output_server/&gt;&lt;server_script&gt;&lt;![CDATA[// To make code snippet able to test "Sample Input":
+
+// fnName(arg1, arg2, arg3);
+// function fnName(arg1, arg2, arg3) {
+    // Code to execute
+    // return &lt;result&gt;;
+// }]]&gt;&lt;/server_script&gt;&lt;sys_class_name&gt;x_8821_code_code_snippet&lt;/sys_class_name&gt;&lt;sys_created_by&gt;alex.chansuthus@infocenter.io&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-09-29 20:24:00&lt;/sys_created_on&gt;&lt;sys_id&gt;062a68f11b2f1050fbdb78cf034bcb6d&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;[Revisit] How to Construct an HTML Table from a JSON Payload (Glide Fields, Variable Payload, REST Payload)&lt;/sys_name&gt;&lt;sys_package display_value="Code Search and Snip" source="x_8821_code"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Code Search and Snip"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_scope&gt;&lt;sys_update_name&gt;x_8821_code_code_snippet_062a68f11b2f1050fbdb78cf034bcb6d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mike.cornell@infocenter.io&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-10-23 03:09:40&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;body&gt;  
+
+  &lt;table&gt;  
+    &lt;tbody id="inputTable"&gt;  
+    &lt;/tbody&gt;  
+  &lt;/table&gt;  
+
+  &lt;script&gt;    
+
+    var inputTable = document.getElementById("inputTable");    
+
+    var json = '[{"number":0,"fields":[{"displayField":"u_accept_or_deny","searchFields":"u_accept_or_deny","label":"Accept or Deny?","type":"reference","valueField":"sys_id","value":{"value":"66380ea91362b6009cd2d0528144b047","displayValue":"Accept"},"table":"u_tsc_dropdowns"},{"label":"Source*","type":"text","value":"test"},{"label":"Destination*","type":"text","value":"test"},{"displayField":"u_service","searchFields":"u_service","label":"Service","type":"reference","valueField":"sys_id","value":{"value":"494f8ccf13aef6009cd2d0528144b08b","displayValue":"UDP"},"table":"u_tsc_firewall_service"},{"label":"Applications","type":"text","value":"test"}]},{"number":1,"fields":[{"displayField":"u_accept_or_deny","searchFields":"u_accept_or_deny","label":"Accept or Deny?","type":"reference","valueField":"sys_id","value":{"value":"cb38c26d1362b6009cd2d0528144b0bd","displayValue":"Deny"},"table":"u_tsc_dropdowns"},{"label":"Source*","type":"text","value":"mike"},{"label":"Destination*","type":"text","value":"test"},{"displayField":"u_service","searchFields":"u_service","label":"Service","type":"reference","valueField":"sys_id","value":{"value":"9e4f440313eef6009cd2d0528144b091","displayValue":"ICMP"},"table":"u_tsc_firewall_service"},{"label":"Applications","type":"text","value":"jon"}]},{"number":2,"fields":[{"displayField":"u_accept_or_deny","searchFields":"u_accept_or_deny","label":"Accept or Deny?","type":"reference","valueField":"sys_id","value":{"value":"66380ea91362b6009cd2d0528144b047","displayValue":"Accept"},"table":"u_tsc_dropdowns"},{"label":"Source*","type":"text","value":"michael"},{"label":"Destination*","type":"text","value":"yeah"},{"displayField":"u_service","searchFields":"u_service","label":"Service","type":"reference","valueField":"sys_id","value":{"value":"323fc80313eef6009cd2d0528144b0e3","displayValue":"TCP"},"table":"u_tsc_firewall_service"},{"label":"Applications","type":"text","value":"jordan"}]}]';    
+
+    var parsed = JSON.parse(json);    
+
+    var currentDescription = "";    
+
+    currentDescription +=     
+      "&lt;table&gt;&lt;tbody&gt;" +    
+      "&lt;tr style='font-weight:bold'&gt;&lt;td width='100' style='border:1px solid black'&gt;" + parsed[0].fields[0].label +     
+      "&lt;/td&gt;&lt;td width='100' style='border:1px solid black'&gt;" + parsed[0].fields[1].label +     
+      "&lt;/td&gt;&lt;td width='100' style='border:1px solid black'&gt;" + parsed[0].fields[2].label +     
+      "&lt;/td&gt;&lt;td width='100' style='border:1px solid black'&gt;" + parsed[0].fields[3].label +     
+      "&lt;/td&gt;&lt;td width='100' style='border:1px solid black'&gt;" + parsed[0].fields[4].label + "&lt;/td&gt;&lt;/tr&gt;";    
+
+    currentDescription +=     
+      "&lt;tr&gt;&lt;td width='100' style='border:1px solid black'&gt;" + "------" +     
+      "&lt;/td&gt;&lt;td width='100' style='border:1px solid black'&gt;" + "------" +     
+      "&lt;/td&gt;&lt;td width='100' style='border:1px solid black'&gt;" + "------" +    
+      "&lt;/td&gt;&lt;td width='100' style='border:1px solid black'&gt;" + "------" +     
+      "&lt;/td&gt;&lt;td width='100' style='border:1px solid black'&gt;" + "------" + "&lt;/td&gt;&lt;/tr&gt;";    
+
+    for (var i = 0; i &lt; parsed.length; i++) {    
+      var acceptOrDenyVal = parsed[i].fields[0].value.displayValue;    
+      var sourceVal = parsed[i].fields[1].value;    
+      var destinationVal = parsed[i].fields[2].value;    
+      var serviceVal = parsed[i].fields[3].value.displayValue;    
+      var applicationsVal = parsed[i].fields[4].value;    
+
+      currentDescription +=     
+        "&lt;tr&gt;&lt;td width='100' style='border:1px solid black'&gt;" + acceptOrDenyVal +     
+        "&lt;/td&gt;&lt;td width='100' style='border:1px solid black'&gt;" + sourceVal +     
+        "&lt;/td&gt;&lt;td width='100' style='border:1px solid black'&gt;" + destinationVal +    
+        "&lt;/td&gt;&lt;td width='100' style='border:1px solid black'&gt;" + serviceVal +    
+        "&lt;/td&gt;&lt;td width='100' style='border:1px solid black'&gt;" + applicationsVal +    
+        "&lt;/td&gt;&lt;/tr&gt;";    
+    }    
+
+    currentDescription += "&lt;/tbody&gt;&lt;/table&gt;";    
+    inputTable.innerHTML = currentDescription;    
+
+  &lt;/script&gt; 
+
+&lt;/body&gt;  
+]]&gt;&lt;/template&gt;&lt;/x_8821_code_code_snippet&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1402253323</payload_hash>
+        <record_name>[Revisit] How to Construct an HTML Table from a JSON Payload (Glide Fields, Variable Payload, REST P</record_name>
+        <reverted_from/>
+        <source>35f59cef1b40e810476d85507e4bcb43</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mike.cornell@infocenter.io</sys_created_by>
+        <sys_created_on>2020-10-30 01:55:59</sys_created_on>
+        <sys_id>e116d8231b80e810476d85507e4bcb0f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1757737ff300000001</sys_recorded_at>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-30 01:55:59</sys_updated_on>
+        <type>Code Snippet</type>
+        <update_guid>9439381909c064505fe04045eaf5954e</update_guid>
+        <update_guid_history>9439381909c064505fe04045eaf5954e:1402253323</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 10-29-2020 22:22:59">094c9c2b1b80e810476d85507e4bcb4c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mike.cornell@infocenter.io</sys_created_by>
+        <sys_created_on>2020-10-30 02:22:59</sys_created_on>
+        <sys_db_object display_value="" name="x_8821_code_code_snippet">x_8821_code_code_snippet</sys_db_object>
+        <sys_id>28288d0995d64c238ac2a364bb37a7c1</sys_id>
+        <sys_metadata>062a68f11b2f1050fbdb78cf034bcb6d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>[Revisit] How to Construct an HTML Table from a JSON Payload (Glide Fields, Variable Payload, REST Payload)</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_scope_delete display_value="">2f952166b84d4492b77d2b80ba54eeb1</sys_scope_delete>
+        <sys_update_name>x_8821_code_code_snippet_062a68f11b2f1050fbdb78cf034bcb6d</sys_update_name>
+        <sys_update_version display_value="x_8821_code_code_snippet_062a68f11b2f1050fbdb78cf034bcb6d">e116d8231b80e810476d85507e4bcb0f</sys_update_version>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-30 02:22:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

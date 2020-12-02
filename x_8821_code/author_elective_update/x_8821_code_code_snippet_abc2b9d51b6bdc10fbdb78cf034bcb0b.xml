@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_8821_code_code_snippet">
+    <x_8821_code_code_snippet action="DELETE">
+        <applicable_in_application_files>75b339191b6bdc10fbdb78cf034bcbbb</applicable_in_application_files>
+        <applicable_in_context>server</applicable_in_context>
+        <client_script><![CDATA[// To make code snippet able to test "Sample Input":
+
+// fnName(arg1, arg2, arg3);
+// function fnName(arg1, arg2, arg3) {
+    // Code to execute
+    // return <result>;
+// }]]></client_script>
+        <css/>
+        <description>Below is an example that illustrates how to execute a workflow from a script.  This script in particular (originally enacted as a Run Script in a workflow) executes a workflow as designated from a custom reference field in the Catalog Item table.</description>
+        <jelly_script/>
+        <link/>
+        <name>How to Execute a Workflow with a Script</name>
+        <option_schema/>
+        <sample_input>//No sample</sample_input>
+        <sample_output_client/>
+        <sample_output_server/>
+        <server_script><![CDATA[// RUN SCRIPT //  
+  
+// Call catalog item reference  
+var catItemGR = new GlideRecord("sc_cat_item");  
+catItemGR.addQuery("sys_id", current.cat_item);  
+catItemGR.query();  
+if (catItemGR.next()) {  
+      
+    // Retrieve execution workflow ID  
+    var workflowID = catItemGR.getValue("u_execution_workflow");  
+      
+    // Call workflow  
+    var w = new Workflow();  
+    var contextSysID = w.startFlow(workflowID, current, current.operation()); // getVars()  
+      
+    // Get workflow context sys_id  
+    workflow.scratchpad.contextSysID = contextSysID.getValue("sys_id");  
+}  
+  
+  
+  
+  
+  
+// WAIT FOR CONDITION //  
+  
+// Set the variable 'answer' to true or false to indicate if the condition has been met or not.  
+  
+answer = false;  
+  
+// Look to see if the workflow context has been completed before continuing to the next workflow step  
+var workflowContextGR = new GlideRecord("wf_context");  
+workflowContextGR.addQuery("sys_id", workflow.scratchpad.contextSysID);  
+workflowContextGR.query();  
+while (workflowContextGR.next()) {  
+      
+    if (workflowContextGR.getValue("state") == "finished") {  
+        answer = true;  
+    }  
+}  
+]]></server_script>
+        <sys_class_name>x_8821_code_code_snippet</sys_class_name>
+        <sys_created_by>alex.chansuthus@infocenter.io</sys_created_by>
+        <sys_created_on>2020-09-28 12:26:02</sys_created_on>
+        <sys_id>abc2b9d51b6bdc10fbdb78cf034bcb0b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>How to Execute a Workflow with a Script</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>x_8821_code_code_snippet_abc2b9d51b6bdc10fbdb78cf034bcb0b</sys_update_name>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-23 03:09:17</sys_updated_on>
+        <template/>
+    </x_8821_code_code_snippet>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</application>
+        <file_path/>
+        <instance_id>bfd5826bdb455f400e785d00cf961982</instance_id>
+        <instance_name>infocenter</instance_name>
+        <name>x_8821_code_code_snippet_abc2b9d51b6bdc10fbdb78cf034bcb0b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_8821_code_code_snippet"&gt;&lt;x_8821_code_code_snippet action="INSERT_OR_UPDATE"&gt;&lt;applicable_in_application_files&gt;75b339191b6bdc10fbdb78cf034bcbbb&lt;/applicable_in_application_files&gt;&lt;applicable_in_context&gt;server&lt;/applicable_in_context&gt;&lt;client_script&gt;&lt;![CDATA[// To make code snippet able to test "Sample Input":
+
+// fnName(arg1, arg2, arg3);
+// function fnName(arg1, arg2, arg3) {
+    // Code to execute
+    // return &lt;result&gt;;
+// }]]&gt;&lt;/client_script&gt;&lt;css/&gt;&lt;description&gt;Below is an example that illustrates how to execute a workflow from a script.  This script in particular (originally enacted as a Run Script in a workflow) executes a workflow as designated from a custom reference field in the Catalog Item table.&lt;/description&gt;&lt;jelly_script/&gt;&lt;link/&gt;&lt;name&gt;How to Execute a Workflow with a Script&lt;/name&gt;&lt;option_schema/&gt;&lt;sample_input&gt;//No sample&lt;/sample_input&gt;&lt;sample_output_client/&gt;&lt;sample_output_server/&gt;&lt;server_script&gt;&lt;![CDATA[// RUN SCRIPT //  
+  
+// Call catalog item reference  
+var catItemGR = new GlideRecord("sc_cat_item");  
+catItemGR.addQuery("sys_id", current.cat_item);  
+catItemGR.query();  
+if (catItemGR.next()) {  
+      
+    // Retrieve execution workflow ID  
+    var workflowID = catItemGR.getValue("u_execution_workflow");  
+      
+    // Call workflow  
+    var w = new Workflow();  
+    var contextSysID = w.startFlow(workflowID, current, current.operation()); // getVars()  
+      
+    // Get workflow context sys_id  
+    workflow.scratchpad.contextSysID = contextSysID.getValue("sys_id");  
+}  
+  
+  
+  
+  
+  
+// WAIT FOR CONDITION //  
+  
+// Set the variable 'answer' to true or false to indicate if the condition has been met or not.  
+  
+answer = false;  
+  
+// Look to see if the workflow context has been completed before continuing to the next workflow step  
+var workflowContextGR = new GlideRecord("wf_context");  
+workflowContextGR.addQuery("sys_id", workflow.scratchpad.contextSysID);  
+workflowContextGR.query();  
+while (workflowContextGR.next()) {  
+      
+    if (workflowContextGR.getValue("state") == "finished") {  
+        answer = true;  
+    }  
+}  
+]]&gt;&lt;/server_script&gt;&lt;sys_class_name&gt;x_8821_code_code_snippet&lt;/sys_class_name&gt;&lt;sys_created_by&gt;alex.chansuthus@infocenter.io&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-09-28 12:26:02&lt;/sys_created_on&gt;&lt;sys_id&gt;abc2b9d51b6bdc10fbdb78cf034bcb0b&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;How to Execute a Workflow with a Script&lt;/sys_name&gt;&lt;sys_package display_value="Code Search and Snip" source="x_8821_code"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Code Search and Snip"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_scope&gt;&lt;sys_update_name&gt;x_8821_code_code_snippet_abc2b9d51b6bdc10fbdb78cf034bcb0b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mike.cornell@infocenter.io&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-10-23 03:09:17&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;/x_8821_code_code_snippet&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-220987633</payload_hash>
+        <record_name>How to Execute a Workflow with a Script</record_name>
+        <reverted_from/>
+        <source>35f59cef1b40e810476d85507e4bcb43</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mike.cornell@infocenter.io</sys_created_by>
+        <sys_created_on>2020-10-30 01:56:00</sys_created_on>
+        <sys_id>a916d8231b80e810476d85507e4bcb27</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1757737ffcb0000001</sys_recorded_at>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-30 01:56:00</sys_updated_on>
+        <type>Code Snippet</type>
+        <update_guid>dc393819dac06450e94ed586ac18cb5a</update_guid>
+        <update_guid_history>dc393819dac06450e94ed586ac18cb5a:-220987633</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 10-29-2020 22:23:00">4d4c9c2b1b80e810476d85507e4bcb68</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mike.cornell@infocenter.io</sys_created_by>
+        <sys_created_on>2020-10-30 02:23:00</sys_created_on>
+        <sys_db_object display_value="" name="x_8821_code_code_snippet">x_8821_code_code_snippet</sys_db_object>
+        <sys_id>4a1090ed91ee4bce8bb9770892696584</sys_id>
+        <sys_metadata>abc2b9d51b6bdc10fbdb78cf034bcb0b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>How to Execute a Workflow with a Script</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_scope_delete display_value="">2f952166b84d4492b77d2b80ba54eeb1</sys_scope_delete>
+        <sys_update_name>x_8821_code_code_snippet_abc2b9d51b6bdc10fbdb78cf034bcb0b</sys_update_name>
+        <sys_update_version display_value="x_8821_code_code_snippet_abc2b9d51b6bdc10fbdb78cf034bcb0b">a916d8231b80e810476d85507e4bcb27</sys_update_version>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-30 02:23:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

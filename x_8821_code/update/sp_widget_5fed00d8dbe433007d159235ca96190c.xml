@@ -492,14 +492,14 @@ div.enlighter&gt;div::before {
         <sys_created_by>jacebenson</sys_created_by>
         <sys_created_on>2019-03-28 06:58:01</sys_created_on>
         <sys_id>5fed00d8dbe433007d159235ca96190c</sys_id>
-        <sys_mod_count>1505</sys_mod_count>
+        <sys_mod_count>1510</sys_mod_count>
         <sys_name>code-search</sys_name>
         <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
         <sys_policy/>
         <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
         <sys_update_name>sp_widget_5fed00d8dbe433007d159235ca96190c</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-25 02:56:04</sys_updated_on>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-23 05:18:19</sys_updated_on>
         <template><![CDATA[<div class="row">
   <nav class="col-md-2" id="left-nav">
     <ul class="nav nav-pills nav-stacked" id="ordered-list">
@@ -650,7 +650,7 @@ div.enlighter&gt;div::before {
         <div ng-if="hits > 0 && search === 'sysid'">
           Found
         </div>
-        <div ng-if="hits === 0">
+        <div ng-if="hits === 0 && search === 'code'">
           No Matches Found
         </div>
       </h1>

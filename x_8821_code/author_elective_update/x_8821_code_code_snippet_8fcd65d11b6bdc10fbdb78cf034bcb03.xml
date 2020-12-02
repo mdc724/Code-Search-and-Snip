@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_8821_code_code_snippet">
+    <x_8821_code_code_snippet action="DELETE">
+        <applicable_in_application_files>ab9c69ae2f571c107e72821df699b658,7ecce1ee2f571c107e72821df699b64e,e0cc21ee2f571c107e72821df699b604</applicable_in_application_files>
+        <applicable_in_context>server</applicable_in_context>
+        <client_script/>
+        <css/>
+        <description>ServiceNow has never produced a way to convert ISO8601 date formats to ServiceNow standard Date/Time field values (even though "Schedule Date/Time" type fields are stored in ISO8601 format).  When you stumble on a scenario where this conversion needs to occur from ISO8601 format to ServiceNow Date/Time, please use the function below (captured from a Script Includes) in order to perform this operation successfully.</description>
+        <jelly_script/>
+        <link/>
+        <name>How to Convert an ISO8601 Date to ServiceNow Date Format</name>
+        <option_schema/>
+        <sample_input>{
+"isoDateTime":  "2020-09-28T10:03:24+00:00"
+}</sample_input>
+        <sample_output_client/>
+        <sample_output_server>2020-09-28 10:03:24</sample_output_server>
+        <server_script><![CDATA[convertISO8601ToStandardDateTime(isoDateTime);
+function convertISO8601ToStandardDateTime(isoDateTime) {    
+      
+    if ((isoDateTime == '') || (isoDateTime == null) || (isoDateTime == '1800-01-01T00:00:00.000')) {  
+        return null;  
+    }  
+  
+    // GlideDateTime constructor expects date format: 'yyyy-MM-dd HH:mm:ss'  
+    var parts = isoDateTime.split(/[-TZ:+]/g);  
+    if (parts.length < 6) {  
+        return null;  
+    }  
+  
+    var dts = '';  
+    dts += parts[0] + "-" + parts[1] + "-" + parts[2];  
+    dts += ' ';  
+    dts += parts[3] + ":" + parts[4] + ":" + parts[5];  
+  
+  
+  
+    // GlideDateTime object  
+    var gdt = new GlideDateTime(dts);  
+  
+    //Calculate timezone offset - if supplied  
+    if ((parts[6] != null) && (parts[7] != null)) {  
+  
+        //determine offset amount  
+        var offsetTime = new GlideTime();  
+        var tzOffset = parts[6] + ':' + parts[7] + ':00'; // hh:mm:ss  
+        offsetTime.setValue(tzOffset);  
+  
+        //remove offset by addition or subtraction  
+        var sign = /\d\d-\d\d:\d\d$/.test(isoDateTime)? '-' : '+';  
+  
+        //if sign is + then remove time to get us back to UTC  
+        if (sign == '+') gdt.subtract(offsetTime);  
+  
+        //if sign is - then add time to get us back to UTC  
+        else if (sign == '-') gdt.add(offsetTime);  
+    }  
+  
+    return gdt.getValue();  
+
+} ]]></server_script>
+        <sys_class_name>x_8821_code_code_snippet</sys_class_name>
+        <sys_created_by>alex.chansuthus@infocenter.io</sys_created_by>
+        <sys_created_on>2020-09-28 12:04:26</sys_created_on>
+        <sys_id>8fcd65d11b6bdc10fbdb78cf034bcb03</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>How to Convert an ISO8601 Date to ServiceNow Date Format</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_update_name>x_8821_code_code_snippet_8fcd65d11b6bdc10fbdb78cf034bcb03</sys_update_name>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-23 14:23:42</sys_updated_on>
+        <template/>
+    </x_8821_code_code_snippet>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</application>
+        <file_path/>
+        <instance_id>bfd5826bdb455f400e785d00cf961982</instance_id>
+        <instance_name>infocenter</instance_name>
+        <name>x_8821_code_code_snippet_8fcd65d11b6bdc10fbdb78cf034bcb03</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_8821_code_code_snippet"&gt;&lt;x_8821_code_code_snippet action="INSERT_OR_UPDATE"&gt;&lt;applicable_in_application_files&gt;ab9c69ae2f571c107e72821df699b658,7ecce1ee2f571c107e72821df699b64e,e0cc21ee2f571c107e72821df699b604&lt;/applicable_in_application_files&gt;&lt;applicable_in_context&gt;server&lt;/applicable_in_context&gt;&lt;client_script/&gt;&lt;css/&gt;&lt;description&gt;ServiceNow has never produced a way to convert ISO8601 date formats to ServiceNow standard Date/Time field values (even though "Schedule Date/Time" type fields are stored in ISO8601 format).  When you stumble on a scenario where this conversion needs to occur from ISO8601 format to ServiceNow Date/Time, please use the function below (captured from a Script Includes) in order to perform this operation successfully.&lt;/description&gt;&lt;jelly_script/&gt;&lt;link/&gt;&lt;name&gt;How to Convert an ISO8601 Date to ServiceNow Date Format&lt;/name&gt;&lt;option_schema/&gt;&lt;sample_input&gt;{
+"isoDateTime":  "2020-09-28T10:03:24+00:00"
+}&lt;/sample_input&gt;&lt;sample_output_client/&gt;&lt;sample_output_server&gt;2020-09-28 10:03:24&lt;/sample_output_server&gt;&lt;server_script&gt;&lt;![CDATA[convertISO8601ToStandardDateTime(isoDateTime);
+function convertISO8601ToStandardDateTime(isoDateTime) {    
+      
+    if ((isoDateTime == '') || (isoDateTime == null) || (isoDateTime == '1800-01-01T00:00:00.000')) {  
+        return null;  
+    }  
+  
+    // GlideDateTime constructor expects date format: 'yyyy-MM-dd HH:mm:ss'  
+    var parts = isoDateTime.split(/[-TZ:+]/g);  
+    if (parts.length &lt; 6) {  
+        return null;  
+    }  
+  
+    var dts = '';  
+    dts += parts[0] + "-" + parts[1] + "-" + parts[2];  
+    dts += ' ';  
+    dts += parts[3] + ":" + parts[4] + ":" + parts[5];  
+  
+  
+  
+    // GlideDateTime object  
+    var gdt = new GlideDateTime(dts);  
+  
+    //Calculate timezone offset - if supplied  
+    if ((parts[6] != null) &amp;&amp; (parts[7] != null)) {  
+  
+        //determine offset amount  
+        var offsetTime = new GlideTime();  
+        var tzOffset = parts[6] + ':' + parts[7] + ':00'; // hh:mm:ss  
+        offsetTime.setValue(tzOffset);  
+  
+        //remove offset by addition or subtraction  
+        var sign = /\d\d-\d\d:\d\d$/.test(isoDateTime)? '-' : '+';  
+  
+        //if sign is + then remove time to get us back to UTC  
+        if (sign == '+') gdt.subtract(offsetTime);  
+  
+        //if sign is - then add time to get us back to UTC  
+        else if (sign == '-') gdt.add(offsetTime);  
+    }  
+  
+    return gdt.getValue();  
+
+} ]]&gt;&lt;/server_script&gt;&lt;sys_class_name&gt;x_8821_code_code_snippet&lt;/sys_class_name&gt;&lt;sys_created_by&gt;alex.chansuthus@infocenter.io&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-09-28 12:04:26&lt;/sys_created_on&gt;&lt;sys_id&gt;8fcd65d11b6bdc10fbdb78cf034bcb03&lt;/sys_id&gt;&lt;sys_mod_count&gt;17&lt;/sys_mod_count&gt;&lt;sys_name&gt;How to Convert an ISO8601 Date to ServiceNow Date Format&lt;/sys_name&gt;&lt;sys_package display_value="Code Search and Snip" source="x_8821_code"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Code Search and Snip"&gt;0f7b73c4dba433007d159235ca96197c&lt;/sys_scope&gt;&lt;sys_update_name&gt;x_8821_code_code_snippet_8fcd65d11b6bdc10fbdb78cf034bcb03&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mike.cornell@infocenter.io&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-10-23 14:23:42&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;/x_8821_code_code_snippet&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-128570787</payload_hash>
+        <record_name>How to Convert an ISO8601 Date to ServiceNow Date Format</record_name>
+        <reverted_from/>
+        <source>35f59cef1b40e810476d85507e4bcb43</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mike.cornell@infocenter.io</sys_created_by>
+        <sys_created_on>2020-10-30 01:55:59</sys_created_on>
+        <sys_id>2116d8231b80e810476d85507e4bcb21</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1757737ff7b0000001</sys_recorded_at>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-30 01:55:59</sys_updated_on>
+        <type>Code Snippet</type>
+        <update_guid>8e1e7619468c6450864499843f867863</update_guid>
+        <update_guid_history>8e1e7619468c6450864499843f867863:-128570787,25914995f1046450933f3ae0b8f20c8f:-1827370917,d4dfb45577046450ee356325b82aa3af:-128570787,10393819e3c06450fc79de4dd93e8354:1570229343</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 10-29-2020 22:22:59">054c9c2b1b80e810476d85507e4bcb5a</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mike.cornell@infocenter.io</sys_created_by>
+        <sys_created_on>2020-10-30 02:22:59</sys_created_on>
+        <sys_db_object display_value="" name="x_8821_code_code_snippet">x_8821_code_code_snippet</sys_db_object>
+        <sys_id>305e9455545e43239860b600e226b2d9</sys_id>
+        <sys_metadata>8fcd65d11b6bdc10fbdb78cf034bcb03</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>How to Convert an ISO8601 Date to ServiceNow Date Format</sys_name>
+        <sys_package display_value="Code Search and Snip" source="x_8821_code">0f7b73c4dba433007d159235ca96197c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Code Search and Snip">0f7b73c4dba433007d159235ca96197c</sys_scope>
+        <sys_scope_delete display_value="">2f952166b84d4492b77d2b80ba54eeb1</sys_scope_delete>
+        <sys_update_name>x_8821_code_code_snippet_8fcd65d11b6bdc10fbdb78cf034bcb03</sys_update_name>
+        <sys_update_version display_value="x_8821_code_code_snippet_8fcd65d11b6bdc10fbdb78cf034bcb03">2116d8231b80e810476d85507e4bcb21</sys_update_version>
+        <sys_updated_by>mike.cornell@infocenter.io</sys_updated_by>
+        <sys_updated_on>2020-10-30 02:22:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

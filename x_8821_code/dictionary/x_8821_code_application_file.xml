@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Application File" max_length="40" name="x_8821_code_application_file" sizeclass="35" type="collection">
+    <element label="Application File" max_length="40" name="x_8821_code_application_file" sizeclass="32" type="collection">
         <element choice="3" label="Context" mandatory="true" max_length="255" name="context" type="string">
             <choice>
                 <element inactive_on_update="false" label="Client" sequence="100" value="client"/>

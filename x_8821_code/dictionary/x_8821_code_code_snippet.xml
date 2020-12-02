@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="update_synch=true" extends="sys_metadata" label="Code Snippet" max_length="40" name="x_8821_code_code_snippet" sizeclass="12" type="collection">
-        <element label="Applicable in Application Files" max_length="4000" name="applicable_in_application_files" reference="x_8821_code_application_file" reference_qual="javascript:new x_8821_code.Utils().getApplicationFilesInContext(current.applicable_in_context);" type="glide_list" use_reference_qualifier="advanced"/>
+        <element attributes="edge_encryption_enabled=true,no_sort=true,slushbucket_ref_no_expand=true" label="Applicable in Application Files" max_length="4000" name="applicable_in_application_files" reference="x_8821_code_application_file" reference_qual="javascript:new x_8821_code.Utils().getApplicationFilesInContext(current.applicable_in_context);" type="glide_list" use_reference_qualifier="advanced"/>
         <element choice="1" label="Applicable in Context" mandatory="true" max_length="255" name="applicable_in_context" type="string">
             <choice>
                 <element inactive_on_update="false" label="Client" sequence="100" value="client"/>
@@ -10,17 +10,17 @@
                 <element inactive_on_update="false" label="Multipart/AngularJS" sequence="500" value="multipart_angularjs"/>
             </choice>
         </element>
-        <element attributes="client_script=true" default="// To make code snippet able to test &quot;Sample Input&quot;:&#13;&#10;&#13;&#10;// fnName(arg1, arg2, arg3);&#13;&#10;// function fnName(arg1, arg2, arg3) {&#13;&#10;    // Code to execute&#13;&#10;    // return &lt;result&gt;;&#13;&#10;// }" label="Client script" max_length="8000" name="client_script" type="script"/>
-        <element label="CSS" max_length="4000" name="css" type="css"/>
+        <element attributes="client_script=true,edge_encryption_enabled=true" default="// To make code snippet able to test &quot;Sample Input&quot;:&#13;&#10;&#13;&#10;// fnName(arg1, arg2, arg3);&#13;&#10;// function fnName(arg1, arg2, arg3) {&#13;&#10;    // Code to execute&#13;&#10;    // return &lt;result&gt;;&#13;&#10;// }" label="Client script" max_length="8000" name="client_script" type="script"/>
+        <element attributes="edge_encryption_enabled=true" label="CSS" max_length="4000" name="css" type="css"/>
         <element label="Description" mandatory="true" max_length="4000" name="description" type="string"/>
-        <element label="Jelly script" max_length="40" name="jelly_script" type="xml"/>
-        <element label="Link" max_length="8000" name="link" type="script"/>
+        <element attributes="edge_encryption_enabled=true" label="Jelly script" max_length="40" name="jelly_script" type="xml"/>
+        <element attributes="edge_encryption_enabled=true" label="Link" max_length="8000" name="link" type="script"/>
         <element label="Name" mandatory="true" max_length="255" name="name" type="string"/>
-        <element label="Option schema" max_length="4000" name="option_schema" type="json"/>
-        <element default="{&#13;&#10;&quot;arg1&quot;:  &quot;val1&quot;,&#13;&#10;&quot;arg2&quot;:  &quot;val2&quot;,&#13;&#10;&quot;arg3&quot;:  &quot;val3&quot;&#13;&#10;// Add additional arguments as needed.&#13;&#10;// Please delete these comments before executing.&#13;&#10;}" label="Sample Input" max_length="4000" name="sample_input" type="json"/>
+        <element attributes="edge_encryption_enabled=true" label="Option schema" max_length="4000" name="option_schema" type="json"/>
+        <element attributes="edge_encryption_enabled=true" default="{&#13;&#10;&quot;arg1&quot;:  &quot;val1&quot;,&#13;&#10;&quot;arg2&quot;:  &quot;val2&quot;,&#13;&#10;&quot;arg3&quot;:  &quot;val3&quot;&#13;&#10;// Add additional arguments as needed.&#13;&#10;// Please delete these comments before executing.&#13;&#10;}" label="Sample Input" max_length="4000" name="sample_input" type="json"/>
         <element label="Sample Output (Client)" max_length="4000" name="sample_output_client" type="string"/>
         <element label="Sample Output (Server)" max_length="4000" name="sample_output_server" type="string"/>
-        <element default="// To make code snippet able to test &quot;Sample Input&quot;:&#13;&#10;&#13;&#10;// fnName(arg1, arg2, arg3);&#13;&#10;// function fnName(arg1, arg2, arg3) {&#13;&#10;    // Code to execute&#13;&#10;    // return &lt;result&gt;;&#13;&#10;// }" label="Server script" max_length="8000" name="server_script" type="script"/>
-        <element label="HTML Template" max_length="65000" name="template" type="html_template"/>
+        <element attributes="edge_encryption_enabled=true" default="// To make code snippet able to test &quot;Sample Input&quot;:&#13;&#10;&#13;&#10;// fnName(arg1, arg2, arg3);&#13;&#10;// function fnName(arg1, arg2, arg3) {&#13;&#10;    // Code to execute&#13;&#10;    // return &lt;result&gt;;&#13;&#10;// }" label="Server script" max_length="8000" name="server_script" type="script"/>
+        <element attributes="edge_encryption_enabled=true" label="HTML Template" max_length="65000" name="template" type="html_template"/>
     </element>
 </database>
