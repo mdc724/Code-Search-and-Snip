@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="update_synch=true" extends="sys_metadata" label="Code Snippet" max_length="40" name="x_8821_code_code_snippet" sizeclass="12" type="collection">
+    <element attributes="update_synch=true" extends="sys_metadata" label="Code Snippet" max_length="40" name="x_8821_code_code_snippet" sizeclass="18" type="collection">
         <element attributes="edge_encryption_enabled=true,no_sort=true,slushbucket_ref_no_expand=true" label="Applicable in Application Files" max_length="4000" name="applicable_in_application_files" reference="x_8821_code_application_file" reference_qual="javascript:new x_8821_code.Utils().getApplicationFilesInContext(current.applicable_in_context);" type="glide_list" use_reference_qualifier="advanced"/>
         <element choice="1" label="Applicable in Context" mandatory="true" max_length="255" name="applicable_in_context" type="string">
             <choice>
